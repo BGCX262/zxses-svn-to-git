@@ -1,0 +1,38 @@
+$(document).ready(function(){
+			/*第一种显示方式*/
+			//$("#three").addClass("select").siblings(".slide").animate({width:"show"},300);
+			$("#tabspic_1").siblings(".slide").animate({width:"show"},300);
+			$("#tabspic_1").css("display","none");
+			$(".handle").click(function(){
+				if(!$(this).siblings(".slide").is(":visible")){
+					
+					//$(this).addClass("select");
+					$(this).siblings(".slide").animate({width:"show"},300);
+					$(this).parent().siblings().children(".slide").animate({width:"hide"},300);
+					//$(this).parent().siblings().children(".handle").removeClass("select");
+					//其他隐藏的显示
+					$(this).parent().siblings().children(".handle").css("display","block");
+					//隐藏
+					$(this).css("display","none");
+				}
+				/*else{
+					$(this).siblings(".slide").animate({width:"hide"},300);
+					$(this).removeClass("select");
+				}*/
+			});
+			
+			/*第二种显示方式*/
+			/*$("#three").addClass("select").siblings(".slide").animate({width:"show"},300);
+			$(".handle").click(function(){
+				if(!$(this).siblings(".slide").is(":visible")){
+					$(this).addClass("select");
+					$(this).siblings(".slide").animate({width:"show"},300);
+					$(this).parent().siblings().children(".slide").animate({width:"hide"},300);
+					$(this).parent().siblings().children(".handle").removeClass("select");
+				}
+				else{
+					$(this).siblings(".slide").animate({width:"hide"},300);
+					$(this).removeClass("select");
+				}
+			});*/
+});

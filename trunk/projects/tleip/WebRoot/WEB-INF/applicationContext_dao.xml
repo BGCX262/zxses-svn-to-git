@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+  <!-- 权限验证 -->
+  	<bean id="checkRight" class="com.lcweb.commons.CheckRight">
+      <property name="jt" ref="JdbcTempProxy"></property>
+    </bean>
+  <!-- 登陆 -->
+    <bean id="loginDao" class="com.lcweb.dao.login.LoginDaoImp">
+      <property name="sessionFactory" ref="sessionFactory"></property>
+      <property name="checkRight" ref="checkRight"></property>
+    </bean>
+    <bean id="LoginDaoProxy" parent="txProxyTemplate">
+      <property name="target" ref="loginDao"></property>
+    </bean>
+     <!-- 角色管理 -->
+    <bean id="rightManageDao" class="com.lcweb.dao.rightmanage.RightManageDaoImpl">
+      <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="rightManageDaoProxy" parent="txProxyTemplate">
+      <property name="target" ref="rightManageDao"></property>
+    </bean>     
+     <!-- News manage module start-->
+    <bean id="newsManageDao" class="com.lcweb.dao.newsmanage.NewsManageDaoImpl">
+      <property name="sessionFactory" ref="sessionFactory"></property>
+      <property name="sqlMapClient" ref="sqlMapClient"></property>
+    </bean>
+    <bean id="newsManageDaoProxy" parent="txProxyTemplate">
+      <property name="target" ref="newsManageDao"></property>
+    </bean>
+     <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation">
+            <value>classpath:/com/lcweb/config/sqlmap/sql-map-config.xml</value>
+        </property>
+	</bean>
+     <!-- News manage module end-->
+     
+     <!-- Member manage module start -->
+     <bean id="memberManageDao" class="com.lcweb.dao.member.MemberManageDaoImpl">
+     	<property name="sessionFactory" ref="sessionFactory"></property>
+      	<property name="sqlMapClient" ref="sqlMapClient"></property>
+     </bean>
+     <bean id="memberManageDaoProxy" parent="txProxyTemplate">
+     	<property name="target" ref="memberManageDao"></property>
+     </bean>
+     <!-- Member manage module end -->
+     
+     <!-- Message module start -->
+     <bean id="messageDao" class="com.lcweb.dao.message.MessageDaoImpl">
+     	<property name="sessionFactory" ref="sessionFactory"></property>
+      	<property name="sqlMapClient" ref="sqlMapClient"></property>
+     </bean>
+     <bean id="messageDaoProxy" parent="txProxyTemplate">
+     	<property name="target" ref="messageDao"></property>
+     </bean>
+     <!-- Message module end -->
+     
+     <!-- News client module begin-->
+     <bean id="newsClientDao" class="com.lcweb.dao.newsclient.NewsClientDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+        <property name="sqlMapClient" ref="sqlMapClient"></property>
+     </bean>
+     <bean id="newsClientDaoProxy" parent="txProxyTemplate">
+      <property name="target" ref="newsClientDao"></property>
+    </bean>
+     
+     <!-- NewsTemplate module end-->
+     <!-- News org module start -->
+     <bean id="newsOrgDao" class="com.lcweb.dao.org.NewsOrgDaoImpl">
+      <property name="sessionFactory" ref="sessionFactory"></property>
+      <property name="sqlMapClient" ref="sqlMapClient"></property>
+    </bean>
+    <bean id="newsOrgDaoProxy" parent="txProxyTemplate">
+      <property name="target" ref="newsOrgDao"></property>
+    </bean>
+    <!--  News org module end -->
+    
+    <!-- 前台登录 start -->
+    <bean id="frontLoginDao" class="com.lcweb.dao.front.FrontLoginDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    	<property name="sqlMapClient" ref="sqlMapClient"></property>
+    </bean>
+    <bean id="frontLoginDaoProxy" parent="txProxyTemplate">
+    	<property name="target" ref="frontLoginDao"></property>
+    </bean>
+    <!-- 前台登录 end -->
+ </beans>

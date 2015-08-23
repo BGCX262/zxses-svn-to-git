@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<!--Action层配置Bean  -->
+	<bean id="sysRoleAction"
+		class="com.zx.core.system.role.action.SysRoleAction" scope="prototype">
+		<property name="sysRoleService" ref="sysRoleService" />
+		<property name="sysMenuService" ref="sysMenuService" />
+		<property name="hrUserService" ref="hrUserService" />
+	</bean>
+	<!--Service层配置Bean  -->
+	<bean id="sysRoleService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.zx.core.system.role.service.SysRoleService">
+				<property name="sysRoleDAO" ref="sysRoleDAO" />
+			</bean>
+		</property>
+	</bean>
+	<!--Dao层配置Bean-->
+	<bean id="sysRoleDAO"
+		class="com.zx.core.system.role.dao.SysRoleDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="jdbcTemplate" ref="JdbcTemp"></property>
+	</bean>
+
+	
+
+</beans>

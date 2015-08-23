@@ -1,0 +1,55 @@
+body {
+	TEXT-ALIGN: center;
+	PADDING-BOTTOM: 20px;
+	MARGIN: 0px;
+	PADDING-LEFT: 20px;
+	PADDING-RIGHT: 20px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND: #ffffff;
+	COLOR: #666666;
+	FONT-SIZE: 14px;
+	PADDING-TOP: 20px
+}
+
+.error_page {
+	PADDING-BOTTOM: 50px;
+	MARGIN: auto;
+	PADDING-LEFT: 50px;
+	WIDTH: 600px;
+	PADDING-RIGHT: 50px;
+	PADDING-TOP: 100px
+}
+
+.error_page H1 {
+	MARGIN: 20px 0px 0px 10px;
+}
+
+.error_page P {
+	MARGIN: 30px 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 5px;
+	PADDING-RIGHT: 0px;
+	PADDING-TOP: 0px;
+}
+
+.error_page p a {
+	cursor: pointer;
+	COLOR: #03F;
+	TEXT-DECORATION: none;
+}
+
+.error_page p:hover {
+	COLOR: #ccc;
+	font-size: 16px;
+	
+}
+
+a {
+	COLOR: #03F;
+	TEXT-DECORATION: none;
+}
+
+a:hover {
+	COLOR: #ccc;
+	TEXT-DECORATION: underline;
+}

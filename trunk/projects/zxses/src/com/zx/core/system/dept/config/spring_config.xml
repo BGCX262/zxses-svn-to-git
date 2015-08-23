@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="hrDeptDAO"
+		class="com.zx.core.system.dept.dao.HrDeptDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<bean id="hrDeptService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.zx.core.system.dept.service.HrDeptService">
+				<property name="hrDeptDAO" ref="hrDeptDAO" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="hrDeptAction"
+		class="com.zx.core.system.dept.action.HrDeptAction"
+		scope="prototype">
+		<property name="hrDeptService" ref="hrDeptService" />
+	</bean>
+
+</beans>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="accountKind" extends="base" namespace="/view">
+		<action name="accountKind" class="accountKindAction">
+			<result name="input">
+				/view/system/basic/accountkind/${#parameters.inputPage[0]}
+			</result>
+			<result name="list">
+				/view/system/basic/accountkind/list.jsp
+			</result>
+			<result name="entryAdd">
+				/view/system/basic/accountkind/add.jsp
+			</result>
+			<result name="entryUpdate">
+				/view/system/basic/accountkind/update.jsp
+			</result>
+		</action>
+	</package>
+</struts>

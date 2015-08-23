@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<!--Dao层配置Bean-->
+	<bean id="sysMenuDAO"
+		class="com.zx.core.system.menu.dao.SysMenuDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!--Service层配置Bean  -->
+	<bean id="sysMenuService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.zx.core.system.menu.service.SysMenuService">
+				<property name="sysMenuDAO" ref="sysMenuDAO" />
+			</bean>
+		</property>
+	</bean>
+	<!--Action层配置Bean  -->
+	<bean id="sysMenuAction"
+		class="com.zx.core.system.menu.action.SysMenuAction" scope="prototype">
+		<property name="sysMenuService" ref="sysMenuService" />
+	</bean>
+	
+	
+
+	
+
+</beans>

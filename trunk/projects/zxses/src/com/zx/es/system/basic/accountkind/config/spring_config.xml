@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!--Action层配置Bean  -->
+	<bean id="accountKindAction"
+		class="com.zx.es.system.basic.accountkind.action.AccountKindAction"
+		scope="prototype">
+		<property name="accountKindService" ref="accountKindService" />
+	</bean>
+	<!--Service层配置Bean  -->
+	<bean id="accountKindService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.zx.es.system.basic.accountkind.service.AccountKindService">
+				<property name="accountKindDAO" ref="accountKindDAO" />
+			</bean>
+		</property>
+	</bean>
+	<!--Dao层配置Bean-->
+	<bean id="accountKindDAO"
+		class="com.zx.es.system.basic.accountkind.dao.AccountKindDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>

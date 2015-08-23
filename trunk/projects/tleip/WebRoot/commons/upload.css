@@ -1,0 +1,39 @@
+DIV {
+	FONT-SIZE: 12px
+}
+TD {
+	FONT-SIZE: 12px
+}
+P {
+	FONT-SIZE: 12px
+}
+A.tl {
+	FONT-SIZE: 12px
+} 
+A.ta {
+	FONT-SIZE: 14px; LINE-HEIGHT: 130%
+}
+A.ta:visited {
+	COLOR: #aa0000; TEXT-DECORATION: none
+}
+P.t {
+	FONT-FAMILY: 隶书; FONT-SIZE: 16px
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.tl:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.tl:visited {
+	COLOR: #aa0000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+A.tl:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}

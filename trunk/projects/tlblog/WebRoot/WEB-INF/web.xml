@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext*.xml</param-value>
+	</context-param>
+	
+	<!-- 对Spring容器进行实例化 -->
+	<listener>
+	      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- 和urlrewriter一起使用，必须注意顺序 -->
+	<filter>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+        <init-param>
+            <param-name>logLevel</param-name>
+            <param-value>WARN</param-value>
+        </init-param>
+    </filter>
+     
+    <filter-mapping>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	
+	<filter>
+		<filter-name>encoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 注册当前当前线程设置pager.offset 和 pagesize的filter(用于后台获得分页信息) -->
+	<filter>
+		<filter-name>PagerFilter</filter-name>
+		<filter-class>com.agilefly.commons.web.PagerFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>PagerFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>validateUserFilter</filter-name>
+		<filter-class>com.agilefly.commons.web.SysUserValidateFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>validateUserFilter</filter-name>
+		<url-pattern>/view/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>struts</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>struts</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 配置后台权限标签 -->
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://www.agilefly.com/tlblog/functions</taglib-uri>
+			<taglib-location>/WEB-INF/sysPrivilege.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+	
+	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

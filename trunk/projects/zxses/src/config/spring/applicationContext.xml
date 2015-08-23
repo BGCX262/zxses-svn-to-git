@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" " http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>
+				WEB-INF/classes/config/database/config.properties
+			</value>
+		</property>
+	</bean>
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url">
+			<value>${database.url}</value>
+		</property>
+		<property name="driverClassName">
+			<value>${database.driver}</value>
+		</property>
+		<property name="username">
+			<value>${database.user}</value>
+		</property>
+		<property name="password">
+			<value>${database.password}</value>
+		</property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					${hibernate.dialect}
+				</prop>
+				<prop key="hibernate.show_sql">
+					${hibernate.showsql}
+				</prop>
+			</props>
+		</property>
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:/com/zx/core/model/hbm/</value>
+				<value>classpath:/com/zx/es/model/hbm/</value>
+			</list>
+		</property>
+
+	</bean>
+
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="txProxyTemplate" abstract="true"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="JdbcTemp"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<!--是否强制使用CGLIB进行动态代理   -->
+		<property name="proxyTargetClass" value="true"></property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="execute*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+		<property name="target">
+			<bean
+				class="com.zx.core.base.jdbc.spring.JDBCTemplateImp">
+				<property name="dataSource" ref="dataSource"></property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="SpringContextUtil"
+		class="com.lcsoft.control.tag.page.util.SpringContextUtil"
+		singleton="true" />
+
+	<import resource="applicationContext_resource.xml" />
+	<import
+		resource="classpath:com/zx/core/config/spring/core_spring.xml" />
+</beans>

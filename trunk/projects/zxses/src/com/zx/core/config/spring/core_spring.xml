@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" " http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- 登录管理-->
+	<import
+		resource="classpath:com/zx/core/login/config/spring_config.xml" />
+
+	<!-- 系统日志 -->
+	<import
+		resource="classpath:com/zx/core/system/log/config/spring_config.xml" />
+
+	<!-- 系统角色 -->
+	<import
+		resource="classpath:com/zx/core/system/role/config/spring_config.xml" />
+
+	<!-- 系统配置 -->
+	<import
+		resource="classpath:com/zx/core/system/set/config/spring_config.xml" />
+
+	<!-- 部门管理 -->
+	<import
+		resource="classpath:com/zx/core/system/dept/config/spring_config.xml" />
+
+	<!-- 菜单管理 -->
+	<import
+		resource="classpath:com/zx/core/system/menu/config/spring_config.xml" />
+
+	<!-- 用户管理 -->
+	<import
+		resource="classpath:com/zx/core/system/user/config/spring_config.xml" />
+
+	<!-- 操作日志 -->
+	<import
+		resource="classpath:com/zx/core/system/oplog/config/spring_config.xml" />
+
+</beans>

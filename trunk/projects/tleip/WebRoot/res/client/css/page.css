@@ -1,0 +1,44 @@
+/*   ×××－－－－ 分页标签 －－－－××× */
+#pageMenu a:hover {
+	COLOR: #ffffff;
+	border: 1px solid #ffffff;
+	background: #0A5DBB;
+	font-weight: bold;
+}
+
+.line {
+	BORDER-BOTTOM: #cccccc 1px dashed;
+	BORDER-RIGHT-STYLE: none;
+	BORDER-TOP-STYLE: none;
+	BORDER-LEFT-STYLE: none
+}
+
+#pageMenu a {
+	margin: 0px 5px 5px 0px;
+	border: 1px solid #cccccc;
+	padding: 5px 5px 5px 5px;
+	background: #ffffff;
+	color: #0A5DBB;
+	display: inline;
+}
+
+#pageMenu strong {
+	padding: 5px 5px 5px 5px;
+	background: #0A5DBB;
+	color: #ffffff;
+	margin: 0px 5px 0px 5px;
+}
+
+#pageMenu ul li {
+	height: 100%;
+	padding: 10px 0 10px 0;
+	list-style-type: none;
+	line-height: 18px;
+	float: left;
+	left: 0px;
+}
+
+#pageMenu ul li span {
+	align: left;
+	padding-right: 30px;
+}

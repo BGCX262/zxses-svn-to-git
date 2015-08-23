@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="zxses"
+  id="myeclipse.1321925910093"
+  context-root="/zxses"
+  j2ee-spec="5.0"
+  archive="zxses.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

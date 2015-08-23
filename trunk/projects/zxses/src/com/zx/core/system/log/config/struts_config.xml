@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="sysLog" extends="base" namespace="/view">
+		<!-- 系统日志 -->
+		<action name="sysLog" class="sysLogAction">
+			<result name="loginlist">/core/system/log/loginlist.jsp</result>
+			<result name="errorlist">/core/system/log/errorlist.jsp</result>
+			<result name="errorview">/core/system/log/errorview.jsp</result>
+		</action>
+	</package>
+</struts>

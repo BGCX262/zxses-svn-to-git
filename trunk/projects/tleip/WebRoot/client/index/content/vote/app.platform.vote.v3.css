@@ -1,0 +1,65 @@
+div,span,p{font-family:"����",Tahoma,sans-serif;word-break:break-all;word-wrap:break-word}
+input,textarea{font-family:"����",Tahoma,sans-serif;font-size:12px;line-height:18px;word-break:break-all;word-wrap:break-word}
+.black{color:#000}
+.f14{font-size:14px}
+.focus{background-color:#FFFFC2}
+#qq_miniNav{height:22px;border-bottom:1px solid #e6e6e6;background:#f9f9f9;color:#a1a0a0;text-align:center;line-height:14px}
+#qq_miniNav div{width:944px;margin:0 auto;text-align:right;padding-top:4px;font-size:12px; font-family:����}
+#qq_miniNav span{display:bolck;float:right}
+#qq_miniNav a{color:#a1a0a0;margin:0 3px;font-size:12px;text-decoration:none;padding:1px 3px 1px 3px;display:block;float:right}
+#qq_miniNav a:hover{color:#fff;background:#929292}
+#top{margin:auto;color:#0545B1;width:100%;text-align:left;text-align:right;height:100px}
+#top #copy{color:#0545B1;position:relative; top:60px;margin-right:30px}
+#top #copy a{color:#0545B1;text-decoration:none}
+#top #copy a:hover{color:#0545B1;text-decoration:underline}
+#body{margin:2px auto;width:958px !important;}
+#body #hot{visibility:hidden}
+#body #hot #border{text-align:right;height:22px;padding:0 10px;border:1px solid #DFDFDF;border-right-style:none;background-color:#ECF1FD;line-height:22px}
+#body #main{margin:auto;width:868px;padding:0 0 0 0}
+#body #main .question{width:780px;margin:5px auto 10px auto;padding-top:10px}
+#body #main .title{width:760px;text-align:left;font-weight:bold;margin:0 auto 5px auto;padding-top:5px;color:#323232}
+#body #main .content{margin:auto;width:705px;text-align:left;line-height:23px;padding:5px 0 5px 0;color:#727272}
+#body #main .content p{margin:0}
+#body #main .detail{margin:auto;text-align:left;line-height:23px;color:#727272}
+#body #main .nodetail{margin:0px;padding:0px}
+#body #main .content table{margin-top:5px}
+#body #main .content td{padding-bottom:5px;border-bottom:1px solid #fff}
+#body #main .result td{border-bottom:1px solid #F1EFF0}
+#body #main .option{width:100px;color:#313131}
+#body #main .line{border-top:1px solid #DFDFDF}
+#body #main .tip{font-size:12px;font-weight:normal;color:#E34A01}
+.icon_vote{border-style:none;margin:0 10px 3px 2px;width:14px;height:14px;font-size:1px;background:url(http://mat1.gtimg.com/www/apps/images/vote_icon_bg_v2.gif) no-repeat right -137px}
+#body #main .icon_list{border-style:none;margin:0 10px 3px 2px;width:14px;height:16px;font-size:1px;background:url(http://mat1.gtimg.com/www/apps/images/vote_icon_bg_v2.gif) no-repeat left -137px}
+#body #main .submit{margin-top:20px;padding:10px;}
+#body #main .f16px{font-size:16px}
+#body #main .f14px{font-size:14px}
+#body #main .btn{width:103px;height:27px;background:url(http://mat1.gtimg.com/www/apps/images/vote_icon_bg_v2.gif) no-repeat center -110px;border-style:none;font-size:14px;font-weight:bold;color:#1951AB;padding:7px;cursor:pointer}
+#body #main .submit a{font-size:14px;color:#0443AF;text-decoration:none}
+#body #main .submit a:hover{text-decoration:underline}
+#body #main .process{width:162px;height:11px;background:#EDEDED;overflow:hidden}
+#body #main .process div{width:160px;height:11px;background:url(http://mat1.gtimg.com/www/apps/images/vote_icon_bg_v2.gif) repeat-x;border-left:1px solid #000;border-right:1px solid #000}
+#body #main .process .style0{border-left-color:#EA7211;border-right-color:#EA7211;background-position:0 0}
+#body #main .process .style1{border-left-color:#AABF00;border-right-color:#AABF00;background-position:0 -11px}
+#body #main .process .style2{border-left-color:#8B2A00;border-right-color:#8B2A00;background-position:0 -22px}
+#body #main .process .style3{border-left-color:#BF844A;border-right-color:#BF844A;background-position:0 -33px}
+#body #main .process .style4{border-left-color:#3A8938;border-right-color:#3A8938;background-position:0 -44px}
+#body #main .process .style5{border-left-color:#486193;border-right-color:#486193;background-position:0 -55px}
+#body #main .process .style6{border-left-color:#7DA3AE;border-right-color:#7DA3AE;background-position:0 -66px}
+#body #main .process .style7{border-left-color:#AE1486;border-right-color:#AE1486;background-position:0 -77px}
+#body #main .process .style8{border-left-color:#5AB502;border-right-color:#5AB502;background-position:0 -88px}
+#body #main .process .style9{border-left-color:#BF2146;border-right-color:#BF2146;background-position:0 -99px}
+#body #main .std{display:none}
+#body #main .result .std{display:table-cell;*display:block}
+#body #main .single_line{width:380px;height:18px;border:1px solid #ADADAE;margin-top:10px}
+#body #main .multi_line{width:380px;height:100px;border:1px solid #ADADAE;margin-top:10px}
+#body #main .opt_other{width:314px;height:18px;border:1px solid #ADADAE;margin-top:4px}
+#body #main .written{font-size:12px;font-weight:normal;color:#000}
+#bot{margin:auto;padding-top:20px;width:960px;line-height:21px;text-align:center}
+#bot a{color:#000;text-decoration:none}
+#bot a:hover{color:black;text-decoration:underline}
+#Float{background-color:#ccc;position:absolute;top:0;left:0;width:100%;height:100%;z-index:99;display:none;filter:alpha(opacity=80);opacity:0.80;-moz-opacity:0.80}
+#Login_Box{background-color:#fff;position:absolute;border:1px solid #87C2E0;width:371px;z-index:100;display:none}
+#Login_Box #nav{background:url(http://mat1.gtimg.com/www/apps/images/vote_icon_bg_v2.gif) repeat-x 0 -153px;height:31px;line-height:31px;color:#fff;width:371px;margin:0 auto}
+#Login_Box #nav .title{color:#194C8B;font-weight:bold;padding-left:16px;text-align:left;font-size:14px}
+#Login_Box #nav .close{float:right;cursor:pointer;background:url(http://mat1.gtimg.com/www/apps/images/vote_icon_bg_v2.gif) no-repeat -14px -137px;height:16px;width:16px;margin:5px}
+#Login_Box #nav a{color:#fff}/*  |xGv00|29695ab2b70002b0538c4e0eb4272a46 */

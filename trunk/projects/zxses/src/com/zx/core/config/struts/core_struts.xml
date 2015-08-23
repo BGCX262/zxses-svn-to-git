@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.custom.i18n.resources"
+		value="config/struts/resource">
+	</constant>
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="base" extends="jasperreports-default">
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+	</package>
+	<!-- 登录管理-->
+	<include file="com/zx/core/login/config/struts_config.xml" />
+
+	<!-- 系统日志 -->
+	<include file="com/zx/core/system/log/config/struts_config.xml" />
+
+	<!-- 系统角色 -->
+	<include
+		file="com/zx/core/system/role/config/struts_config.xml" />
+
+	<!-- 系统配置 -->
+	<include file="com/zx/core/system/set/config/struts_config.xml" />
+
+	<!-- 部门管理 -->
+	<include
+		file="com/zx/core/system/dept/config/struts_config.xml" />
+
+	<!-- 菜单管理 -->
+	<include
+		file="com/zx/core/system/menu/config/struts_config.xml" />
+
+	<!-- 用户管理 -->
+	<include
+		file="com/zx/core/system/user/config/struts_config.xml" />
+
+	<!-- 操作日志 -->
+	<include
+		file="com/zx/core/system/oplog/config/struts_config.xml" />
+
+</struts>

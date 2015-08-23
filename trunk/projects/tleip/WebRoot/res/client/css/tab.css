@@ -1,0 +1,56 @@
+
+.TabADS {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cdcdcd;
+}
+
+.TabADS ul {
+	font-weight: bold;
+	line-height: 36px;
+	height: 28px;
+	color: #000;
+	padding-left: 0px;
+}
+
+.TabADS li {
+	width: 85px;
+	float: left;
+	height: 28px;
+	text-align: center;
+	cursor: pointer;
+	background-image: url(../images/back.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	line-height: 36px;
+	
+	padding-left: 0px;
+}
+
+.TabADS .TasADSOn {
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	background-image: url(../images/front.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 85px;
+	float: left;
+	height: 28px;
+	color: #000;
+}
+
+.TabADSCon {
+	height: 185px;
+}
+
+.TabADSCon li {
+	text-align: left;
+	line-height: 28px;
+}
+.border_dashed{
+	padding-top:8px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #cdcdcd;
+}

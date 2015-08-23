@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!--Action层配置Bean  -->
+	<bean id="hrUserAction"
+		class="com.zx.core.system.user.action.HrUserAction"
+		scope="prototype">
+		<property name="hrUserService" ref="hrUserService" />
+	</bean>
+	<!--Service层配置Bean  -->
+	<bean id="hrUserService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.zx.core.system.user.service.HrUserService">
+				<property name="hrUserDAO" ref="hrUserDAO" />
+			</bean>
+		</property>
+	</bean>
+	<!--Dao层配置Bean-->
+	<bean id="hrUserDAO"
+		class="com.zx.core.system.user.dao.HrUserDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="jdbcTemplate" ref="JdbcTemp"></property>
+	</bean>
+</beans>

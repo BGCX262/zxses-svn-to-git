@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<SCRIPT language="javascript">
+	function MM_preloadimage() { //v3.0
+	var d=document; if(d.image){ if(!d.MM_p) d.MM_p=new Array();
+		var i,j=d.MM_p.length,a=MM_preloadimage.arguments; for(i=0; i<a.length; i++)
+		if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	}
+
+	var ttt
+	ttt=2;
+	function oa_tool1(){
+	if(ttt==2)
+	{
+		ttt=1;
+		frameshow1.src="../theme/blue/images/mainleftspico2.gif";
+		frameshow1.alt="显示"
+		window.parent.frame2.cols="0,9,*";
+	}
+	else
+	{
+		ttt=2;
+		window.parent.frame2.cols="167,12,*";
+		frameshow1.src="../theme/blue/images/mainleftspico.gif";
+		frameshow1.alt="隐藏"
+	}
+	}
+		</SCRIPT>
+
+		<META content="MSHTML 6.00.2800.1106" name=GENERATOR>
+	</HEAD>
+	<BODY leftMargin=0 topMargin=0 marginwidth="0" marginheight="0"
+		onload="MM_preloadimage('../theme/blue/images/mainleftspico.gif','../theme/blue/images/mainleftspico2.gif')">
+		<DIV onclick=oa_tool1() align=center>
+			<TABLE cellSpacing=0 cellPadding=0 width="12" border=0 height="100%">
+				<TR>
+					<TD width="6" align="center"
+						background="../theme/blue/images/main09.gif">
+						<IMG id=frameshow1 style="CURSOR: hand" alt="隐藏"
+							src="../theme/blue/images/mainleftspico.gif">
+					</TD>
+				</TR>
+			</TABLE>
+		</DIV>
+	</BODY>
+</HTML>

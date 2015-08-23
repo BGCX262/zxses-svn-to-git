@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="JBCPPets"
+  id="myeclipse.1389107348671"
+  context-root="/JBCPPets"
+  j2ee-spec="1.4"
+  archive="JBCPPets.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

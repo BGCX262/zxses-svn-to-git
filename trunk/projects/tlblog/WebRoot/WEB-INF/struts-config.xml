@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<!-- ================================================ Form Bean Definitions -->
+	<form-beans>
+		<!--*****************后台系统配置Form***********************-->
+		<form-bean name="sysUserForm" type="com.agilefly.web.form.SysUserForm"/>
+		<form-bean name="sysModuleForm" type="com.agilefly.web.form.SysModuleForm"/>
+		<form-bean name="sysRoleForm" type="com.agilefly.web.form.SysRoleForm"/>
+		<form-bean name="sysBlogTypeForm" type="com.agilefly.web.form.SysBlogTypeForm"/>
+		<form-bean name="sysConfigForm" type="com.agilefly.web.form.SysConfigForm"/>
+		
+		<!--*****************前台系统配置Form***********************-->
+		<form-bean name="blogArticle" type="com.agilefly.web.form.BlogArticleForm"/>
+		<form-bean name="blogArticleQuery" type="com.agilefly.web.form.BlogArticleQueryForm"/>
+	</form-beans>
+
+	<!-- ========================================= Global Exception Definitions -->
+	<global-exceptions>
+	</global-exceptions>
+
+	<!-- =========================================== Global Forward Definitions -->
+	<global-forwards>
+		<!-- 后台全局跳转 -->
+		<forward name="message" path="/view/common/message.jsp" />
+		<forward name="rightMessage" path="/view/common/rightMessage.jsp" />
+		
+		<!-- 前台全局跳转 -->
+		<forward name="client_message" path="/client/client_message.jsp" />
+		<forward name="clientLogin" path="/client/blog/login.jsp" />
+		<forward name="blogindex" path="/client/blog/blog.jsp"/>
+	</global-forwards>
+
+	<!-- =========================================== Action Mapping Definitions -->
+	<action-mappings>
+		<!-- 验证码 -->
+		<action path="/codeImageAction"/>
+		<!--*****************后台系统配置Action***********************-->
+		<!-- 系统初始化 -->
+		<action path="/sys/systeminit">
+			<forward name="success" path="/login.jsp" />
+		</action>
+		<!-- 系统登录 -->
+		<action path="/sys/login" name="sysUserForm" scope="request" parameter="method" input="/login.jsp">
+			<forward name="login" path="/login.jsp" redirect="true"/>
+			<forward name="main" path="/view/main.jsp" redirect="true"/>
+			<forward name="loginindex" path="/login.jsp"/>
+			<forward name="left" path="/view/left.jsp"/>
+			<forward name="top" path="/view/top.jsp"/>
+			<forward name="toupdate" path="/view/passwordUpdate.jsp"/>
+		</action>
+		<!-- 系统模块管理 -->
+		<action path="/view/sysmodule" name="sysModuleForm" scope="request" parameter="method">
+			<forward name="list" path="/view/rightmanage/modulemanage/sysmoduleList.jsp"/>
+			<forward name="add_input" path="/view/rightmanage/modulemanage/sysmoduleAdd.jsp"/>
+			<forward name="update_input" path="/view/rightmanage/modulemanage/sysmoduleUpdate.jsp"/>
+		</action>
+		<!-- 系统用户管理 -->
+		<action path="/view/sysuser" name="sysUserForm" scope="request" parameter="method">
+			<forward name="list" path="/view/rightmanage/usermanage/sysuserList.jsp"/>
+			<forward name="add_input" path="/view/rightmanage/usermanage/sysuserAdd.jsp"/>
+			<forward name="update_input" path="/view/rightmanage/usermanage/sysuserUpdate.jsp"/>
+			<forward name="assignRole_input" path="/view/rightmanage/usermanage/sysuserroleList.jsp"/>
+		</action>
+		<!-- 系统角色管理 -->
+		<action path="/view/sysrole" name="sysRoleForm" scope="request" parameter="method">
+			<forward name="list" path="/view/rightmanage/rolemanage/sysroleList.jsp"/>
+			<forward name="add_input" path="/view/rightmanage/rolemanage/sysroleAdd.jsp"/>
+			<forward name="update_input" path="/view/rightmanage/rolemanage/sysroleUpdate.jsp"/>
+			<forward name="assignPrivilege_input" path="/view/rightmanage/rolemanage/sysroleprivilegeList.jsp"/>
+		</action>
+		<!-- 系统博客文章类型管理 -->
+		<action path="/view/sysblogtype" name="sysBlogTypeForm" scope="request" parameter="method">
+			<forward name="list" path="/view/rightmanage/articletypemanage/sysarticletypeList.jsp"/>
+			<forward name="add_input" path="/view/rightmanage/articletypemanage/sysarticletypeAdd.jsp"/>
+			<forward name="update_input" path="/view/rightmanage/articletypemanage/sysarticletypeUpdate.jsp"/>
+		</action>
+		<!-- 系统设置管理 -->
+		<action path="/view/sysconfig" name="sysConfigForm" scope="request" parameter="method">
+			<forward name="list" path="/view/rightmanage/sysconfigmanage/sysconfigList.jsp"/>
+		</action>
+		
+		
+		<!--*****************前台系统配置Action***********************-->
+		<action path="/client/index" name="sysUserForm" scope="request" parameter="method">
+			<forward name="signup" path="/client/index/reg.jsp"/>
+			<forward name="starts" path="/client/index/starts.jsp"/>
+		</action>
+		
+		<!-- 博客管理 -->
+		<action path="/client/blog" name="sysUserForm" scope="request" parameter="method">
+			<!--
+			<forward name="blogindex" path="/client/blog/blog.jsp"/>
+			-->
+		</action>
+		
+		<!-- 博客文章管理 -->
+		<action path="/blog/article" name="blogArticle" scope="request" parameter="method">
+			<!--
+			<forward name="list" path="/client/rightmanage/rolemanage/sysroleList.jsp"/>
+			-->
+			<forward name="add_input" path="/client/blogarticle/blogarticleAdd.jsp"/>
+			<!--
+			<forward name="update_input" path="/view/rightmanage/rolemanage/sysroleUpdate.jsp"/>
+			<forward name="assignPrivilege_input" path="/view/rightmanage/rolemanage/sysroleprivilegeList.jsp"/>
+			-->
+		</action>
+		<!-- 博客文章搜索 -->
+		<!--<action path="/blogarticle/search" name="blogArticleQuery" scope="request">
+			<forward name="list" path="/client/blogarticle/search.jsp"/>
+		</action>
+		-->
+		<action path="/client/index/search" name="blogArticleQuery" scope="request">
+			<forward name="list" path="/client/index/searchAllList.jsp"/>
+		</action>
+		<action path="/client/index/reindex">
+		</action>
+	</action-mappings>
+	
+	<!-- =================================================== Spring processor -->
+	<!-- 继承DelegatingRequestProcessor的权限处理PermissionProcessor -->
+	<controller>
+		<set-property property="processorClass"
+			value="com.agilefly.web.action.PermissionProcessor" />
+	</controller>
+</struts-config>
+

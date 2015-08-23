@@ -1,0 +1,367 @@
+.jcarousel-skin-tango .jcarousel-container {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+   border-radius: 10px;
+    background: #F0F6F9;
+    border: 1px solid #346F97;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 310px;
+	height:140px;
+    padding: 5px 40px;
+}
+
+.jcarousel-skin-tango .jcarousel-container-vertical {
+    width: 75px;
+    height: 245px;
+    padding: 40px 20px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:  310px;
+    height: 142px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+    width:  75px;
+    height: 245px;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+    width: 95px;
+    height: 140px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+    margin-right: 0;
+}
+
+.jcarousel-skin-tango .jcarousel-item-vertical {
+    margin-bottom: 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 40%;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(img/next-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(img/prev-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-horizontal:focus {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:focus,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 40%;
+    left: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(img/prev-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(img/next-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin-tango .jcarousel-prev-horizontal:focus {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:focus,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+}
+
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-vertical {
+    position: absolute;
+    bottom: 5px;
+    left: 43px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(next-vertical.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-vertical:hover,
+.jcarousel-skin-tango .jcarousel-next-vertical:focus {
+    background-position: 0 -32px;
+}
+
+.jcarousel-skin-tango .jcarousel-next-vertical:active {
+    background-position: 0 -64px;
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:focus,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:active {
+    cursor: default;
+    background-position: 0 -96px;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical {
+    position: absolute;
+    top: 5px;
+    left: 43px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(prev-vertical.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical:hover,
+.jcarousel-skin-tango .jcarousel-prev-vertical:focus {
+    background-position: 0 -32px;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical:active {
+    background-position: 0 -64px;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:focus,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:active {
+    cursor: default;
+    background-position: 0 -96px;
+}
+
+/*头部幻灯*/
+#banner
+	{
+		width:980px;
+		margin:0px auto;
+		height:210px;
+		overflow:hidden;
+		z-index:-1;
+	}
+	#btn
+	{	display: inline;
+		width:110px;
+		hegiht:18px;
+		float:left;
+		margin:-30px 0px 0px 865px;
+		position:absolute;
+		z-index:1;
+	}
+	#btn a
+	{
+		color:#36f;
+		font:700 11px "Arial";
+		background:url(images/ibbtn.gif) no-repeat;
+		float:left;
+		width:18px;
+		height:18px;
+		line-height:18px;
+		text-align:center;
+		text-decoration:none;
+		margin-left:5px;
+	}
+	#btn a.activeSlide
+	{	
+		color:#fff;
+		background:url(images/ibhbtn.gif) no-repeat;
+	}
+	#btn a:hover
+	{	
+		color:#fff;
+		background:url(images/ibhbtn.gif) no-repeat;
+	}
+	
+	
+	/*漂浮可隐藏*/
+.qqbox a:link {
+	color: #000;
+	text-decoration: none;
+}
+.qqbox a:visited {
+	color: #000;
+	text-decoration: none;
+}
+.qqbox a:hover {
+	color: #f80000;
+	text-decoration: underline;
+}
+.qqbox a:active {
+	color: #f80000;
+	text-decoration: underline;
+}
+.qqbox{
+	width:132px;
+	height:auto;
+	overflow:hidden;
+	position:absolute;
+	right:0;
+	top:100px;
+	color:#000000;
+	font-size:12px;
+	letter-spacing:0px;
+}
+.qqlv{
+	width:50px;
+	height:256px;
+	overflow:hidden;
+	position:relative;
+	float:right;
+	z-index:50px;
+}
+.qqkf{
+	width:120px;
+	height:auto;
+	overflow:hidden;
+	right:0;
+	top:0;
+	z-index:99px;
+	border:6px solid #138907;
+	background:#fff;
+}
+.qqkfbt{
+	width:118px;
+	height:20px;
+	overflow:hidden;
+	background:#138907;
+	line-height:20px;
+	font-weight:bold;
+	color:#fff;
+	position:relative;
+	border:1px solid #9CD052;
+	cursor:pointer;
+	text-align:center;
+}
+.qqkfhm{
+	width:112px;
+	height:22px;
+	overflow:hidden;
+	line-height:22px;
+	padding-right:8px;
+	position:relative;
+	margin:3px 0;
+}
+.bgdh{
+	width:102px;
+	padding-left:10px;
+}
+
+
+/*tab页切换*/
+.ui-tabs-nav
+{
+    /*导航容器定义*/
+}
+.ui-tabs-nav li
+{
+    /*默认标签样式*/
+}
+.ui-tabs-nav li.ui-tabs-selected
+{
+    /*激活的标签样式*/
+}
+.ui-tabs-panel
+{
+    /*默认的显示区域样式*/
+}
+.ui-tabs-hide
+{
+    display: none;
+}
+
+/*图片幻灯左右键*/
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+p{line-height:24px;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+#head .frame {WIDTH: 1004px; POSITION: relative; HEIGHT: 397px; overflow:hidden;}
+#head .frames {WIDTH: 2920px; POSITION: relative; HEIGHT: 397px}
+#head .frame-2 {LEFT: 1004px; OVERFLOW: hidden; WIDTH: 1004px; POSITION: absolute; HEIGHT: 397px}
+#head .frame-3 {LEFT: 1460px; OVERFLOW: hidden; WIDTH: 1004px; POSITION: absolute; HEIGHT: 397px}
+#head .frame-4 {LEFT: 2190px; OVERFLOW: hidden; WIDTH: 1004px; POSITION: absolute; HEIGHT: 397px}
+#head .frame-5 {LEFT: 2920px; OVERFLOW: hidden; WIDTH: 1004px; POSITION: absolute; HEIGHT: 397px}
+/*
+#head .controls {DISPLAY: block;  WIDTH:500px; CURSOR: pointer; BOTTOM: 0px; PADDING-TOP: 2px; margin:0 auto;HEIGHT: 35px; position:absolute; left:280px; top:340px; z-index:1111;}
+*/
+#head .controls {DISPLAY: block;  WIDTH:356px; CURSOR: pointer; BOTTOM: 0px; PADDING-TOP: 2px; margin:0 auto;HEIGHT: 105px; position:absolute; left:45px; top:150px; z-index:1111;}
+
+#head .overlay {BORDER-RIGHT: #ededed 5px solid; BORDER-TOP: #ededed 5px solid; DISPLAY: none; FILTER: alpha(opacity=90); BORDER-LEFT: #ededed 5px solid; WIDTH: 188px; CURSOR: hand; BORDER-BOTTOM: #ededed 5px solid; POSITION: absolute; HEIGHT: 118px; BACKGROUND-COLOR: #fff; opacity: .9}
+#head .two-overlay {HEIGHT: 141px}
+#head .olines {HEIGHT: 122px}
+#head .two-olines {HEIGHT: 142px}
+#head .sdw {BORDER-RIGHT: #666 2px solid; BORDER-TOP: #666 0px solid; DISPLAY: block; LEFT: -5px; BORDER-LEFT: #666 0px solid; WIDTH: 196px; BORDER-BOTTOM: #666 2px solid; POSITION: absolute; TOP: -5px; HEIGHT: 127px; opacity: .8}
+#head .two-sdw {HEIGHT: 151px}
+#head .slines {HEIGHT: 126px}
+#head .two-slines {HEIGHT: 149px}
+#head .details {PADDING-RIGHT: 17px; DISPLAY: block; PADDING-LEFT: 17px; PADDING-BOTTOM: 17px; FONT: 12px arial; WIDTH: 163px; PADDING-TOP: 17px; HEIGHT: 93px}
+#head .dlines {HEIGHT: 97px}
+#head .two-dlines {HEIGHT: 137px}
+#head .title {PADDING-BOTTOM: 8px; FONT: bold 15px "Trebuchet MS"; BORDER-BOTTOM: #ccc 1px solid}
+#head .priceMsg {PADDING-BOTTOM: 1px; COLOR: #333; PADDING-TOP: 4px}
+#head .price {FONT: bold 15px arial}
+#head .legal {FONT: 11px arial; COLOR: #666}
+#head .terms {FLOAT: right; WIDTH: 80px}
+#head .content {PADDING-RIGHT: 10px; DISPLAY: none; PADDING-LEFT: 10px; FILTER: alpha(opacity=80); PADDING-BOTTOM: 5px; WIDTH: 695px; PADDING-TOP: 5px; POSITION: absolute; TOP: 258px; BACKGROUND-COLOR: #fff; TEXT-ALIGN: justify; opacity: .8}
+#head .double-des {PADDING-BOTTOM: 12px}
+#head .des {COLOR: #1161b7; PADDING-TOP: 12px}
+#head .selected {FLOAT: left; FONT: 17px "trebuchet ms"; MARGIN-LEFT: 4px; WIDTH: 16px; COLOR: #8f8f8f; POSITION: relative; HEIGHT: 15px}
+#head .off {FLOAT: left; FONT: 17px "trebuchet ms"; MARGIN-LEFT: 4px; WIDTH: 16px; COLOR: #dadada; POSITION: relative; HEIGHT: 15px}
+#head .on {FLOAT: left; FONT: 17px "trebuchet ms"; MARGIN-LEFT: 4px; WIDTH: 16px; COLOR: #1162b7; POSITION: relative; HEIGHT: 15px}
+#head .arrow {FLOAT: left; WIDTH: 44px; HEIGHT: 105px;}
+

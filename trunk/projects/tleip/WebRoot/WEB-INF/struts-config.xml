@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="loginForm"
+			type="com.lcweb.struts.form.LoginForm" />
+		<form-bean name="rightManageForm"
+			type="com.lcweb.struts.form.RightManageForm" />
+		<form-bean name="commonsForm"
+			type="com.lcweb.struts.form.CommonsForm" />
+		<form-bean name="newsmanageForm"
+			type="com.lcweb.struts.form.LoginForm" />
+		<form-bean name="newsClientActionForm"
+			type="com.lcweb.struts.form.NewsClientActionForm" />
+		<form-bean name="newsOrgMangeForm"
+			type="com.lcweb.struts.form.LoginForm" />
+	<!--  	
+		<form-bean name="netInstituteForm"
+			type="com.lcweb.struts.form.LoginForm" />
+	<form-bean name="instructorBlogForm"
+			type="com.lcweb.struts.form.LoginForm" /> 
+	 -->
+		<form-bean name="monitorManageForm"
+			type="com.lcweb.struts.form.LoginForm" />
+			
+		<form-bean name="memberManageForm" type="com.lcweb.struts.form.MemberManageForm"/>	
+			
+			
+		<form-bean name="frontUserFrom"
+			type="com.lcweb.struts.form.FrontUserForm" />
+		<form-bean name="findPasswordForm"
+			type="com.lcweb.struts.form.FindPasswordForm" />
+		<form-bean name="messageForm"
+			type="com.lcweb.struts.form.MessageForm" />
+		<form-bean name="voteForm"
+			type="com.lcweb.struts.form.VoteForm" />
+	</form-beans>
+	<global-forwards>
+		<forward name="noright" path="/noright.jsp"></forward>
+		<forward name="index" path="/login.jsp"></forward>
+
+		<forward name="message" path="/client/index/content/login_reg/message.jsp"></forward>
+	</global-forwards>
+	<action-mappings>
+
+		<!-- 教官博客  
+		<action attribute="instructorBlogForm" name="instructorBlogForm"
+			parameter="method" path="/client/instructorBlog" scope="request"
+			type="com.lcweb.struts.action.InstructorBlogAction" validate="false">
+		</action>
+		  教官博客 End-->
+		
+		<!-- 网络学院 
+		<action attribute="netInstituteForm" name="netInstituteForm"
+			parameter="method" path="/client/netInstitute" scope="request"
+			type="com.lcweb.struts.action.NetInstituteAction" validate="false">
+		</action>
+		 网络学院 End-->
+
+		<!--  
+			 
+			Description:登陆模块        
+		-->
+		<action attribute="loginForm" input="/login.jsp"
+			name="loginForm" parameter="method" path="/login" scope="request"
+			type="com.lcweb.struts.action.LoginAction" validate="false">
+			<forward name="loginindex" path="/login.jsp"></forward>
+			<forward name="left" path="/view/left.jsp"></forward>
+			<forward name="top" path="/view/top.jsp"></forward>
+			<forward name="toupdate" path="/view/passwordUpdate.jsp"></forward>
+		</action>
+
+		<!--  
+			 
+			Description:权限管理模块        
+		-->
+		<action attribute="rightManageForm" name="rightManageForm"
+			path="/view/rightManage" parameter="method" scope="request"
+			type="com.lcweb.struts.action.RightManageAction">
+			<forward name="roleListdo"
+				path="/view/rightManage.do?method=queryRole" />
+			<forward name="roleList"
+				path="/view/rightmanage/rolemanage/RoleList.jsp" />
+			<forward name="roleAdd"
+				path="/view/rightmanage/rolemanage/RoleAdd.jsp" />
+			<forward name="enterUpdateRole"
+				path="/view/rightmanage/rolemanage/roleupdate.jsp" />
+			<forward name="roleRightList"
+				path="/view/rightmanage/roleright/rolerightlist.jsp" />
+			<forward name="roleRightListdo"
+				path="/view/rightManage.do?method=queryRoleRight" />
+			<forward name="roleUserList"
+				path="/view/rightmanage/rolemanage/roleuserlist.jsp" />
+			<forward name="userRightList"
+				path="/view/rightmanage/assignuserright/assignuserright.jsp" />
+			<forward name="batchAssignRight"
+				path="/view/rightmanage/assignuserright/batchassignright.jsp" />
+			<forward name="userRightListdo"
+				path="/view/rightManage.do?method=enterAssignUserRight" />
+			<forward name="batchAssignRightdo"
+				path="/view/rightManage.do?method=batchAssignUserRight" />
+
+			<!-- 单位信息管理 -->
+			<forward name="unitList"
+				path="/view/rightmanage/unitmanage/unitList.jsp" />
+			<forward name="addUnit"
+				path="/view/rightmanage/unitmanage/addUnit.jsp" />
+			<forward name="unitListDo"
+				path="/view/rightManage.do?method=queryUnit" redirect="true" />
+			<forward name="enterUpdateUnit"
+				path="/view/rightmanage/unitmanage/updateUnit.jsp" />
+			<forward name="unitDetailed"
+				path="/view/rightmanage/unitmanage/unitDetailed.jsp" />
+
+			<!-- 部门管理 -->
+			<forward name="deptList"
+				path="/view/rightmanage/departmentmanage/departmentList.jsp" />
+			<forward name="deptListDo"
+				path="/view/rightManage.do?method=queryDepartment" redirect="true" />
+
+			<!-- 部门人员管理 -->
+			<forward name="departmentPersonList"
+				path="/view/rightmanage/departmentperson/departmentPersonList.jsp" />
+			<forward name="personList"
+				path="/view/rightmanage/departmentperson/searchPerson.jsp" />
+			<forward name="departmentPersonListDo"
+				path="/view/rightManage.do?method=queryDepartmentPerson"
+				redirect="true" />
+
+			<!-- 用户管理 -->
+			<forward name="userList"
+				path="/view/rightmanage/usermanage/userList.jsp" />
+			<forward name="userListDo"
+				path="/view/rightManage.do?method=queryPerson" redirect="true" />
+			<forward name="updatePassword"
+				path="/view/rightmanage/usermanage/updatePassword.jsp" />
+			<forward name="updateUser"
+				path="/view/rightmanage/usermanage/updateUser.jsp" />
+			<forward name="enterAddUser"
+				path="/view/rightmanage/usermanage/addUser.jsp" />
+
+		</action>
+
+		<!--  
+			 
+			Description:通用模块        
+		-->
+		<action attribute="commonsForm" name="commonsForm"
+			parameter="method" path="/view/commons" scope="request"
+			type="com.lcweb.struts.action.CommonsAction" validate="false">
+		</action>
+
+		<!--  
+			 
+			Description:News Manage        
+		-->
+		<action attribute="newsmanageForm" name="newsmanageForm"
+			path="/view/newsmanage" parameter="method" scope="request"
+			type="com.lcweb.struts.action.NewsManageAction">
+
+			<!-- 大类 -->
+			<forward name="defindNewsItemBig"
+				path="/view/newsmanage/property/defindNewsItemBig.jsp">
+			</forward>
+			<forward name="findAddNewsItemBig"
+				path="/view/newsmanage/property/addNewsItemBig.jsp">
+			</forward>
+			<forward name="findAmendNewsItemBig"
+				path="/view/newsmanage/property/amendNewsItemBig.jsp">
+			</forward>
+			<forward name="orderbyNewsItemBig"
+				path="/view/newsmanage/property/orderbyNewsItemBig.jsp">
+			</forward>
+			<!-- 小类 -->
+			<forward name="orderbyNewsItemSmall"
+				path="/view/newsmanage/property/orderbyNewsItemSmall.jsp">
+			</forward>
+			<forward name="defindNewsItemSmall"
+				path="/view/newsmanage/property/defindNewsItemSmall.jsp">
+			</forward>
+			<forward name="findAddNewsItemSmall"
+				path="/view/newsmanage/property/addNewsItemSmall.jsp">
+			</forward>
+			<forward name="findAmendNewsItemSmall"
+				path="/view/newsmanage/property/amendNewsItemSmall.jsp">
+			</forward>
+
+			<!-- 栏目导航  -->
+			<forward name="orderbyNavigation"
+				path="/view/newsmanage/property/orderbyNavigation.jsp">
+			</forward>
+			<forward name="defineNewsNavigation"
+				path="/view/newsmanage/property/defineNewsNavigation.jsp">
+			</forward>
+			<forward name="addNewsNavigation"
+				path="/view/newsmanage/property/addNewsNavigation.jsp">
+			</forward>
+			<forward name="amendNewsNavigation"
+				path="/view/newsmanage/property/amendNewsNavigation.jsp">
+			</forward>
+
+			<!-- 广告类型 -->
+			<forward name="defineNewsAdType"
+				path="/view/newsmanage/ad/defineNewsAdType.jsp">
+			</forward>
+			<forward name="addNewsAdType"
+				path="/view/newsmanage/ad/addNewsAdType.jsp">
+			</forward>
+			<forward name="amendNewsAdType"
+				path="/view/newsmanage/ad/amendNewsAdType.jsp">
+			</forward>
+
+			<!-- 广告管理 -->
+			<forward name="defineAdManage"
+				path="/view/newsmanage/ad/defineNewsAdManage.jsp">
+			</forward>
+			<forward name="addAdManage"
+				path="/view/newsmanage/ad/addNewsAdManage.jsp">
+			</forward>
+			<forward name="amendAdManage"
+				path="/view/newsmanage/ad/amendNewsAdManage.jsp">
+			</forward>
+
+			<forward name="newsAdManageInit"
+				path="/view/newsmanage/ad/newsAdManageInit.jsp">
+			</forward>
+			<forward name="newsAdManageTreeInit"
+				path="/view/newsmanage/ad/defineAdManageTree.jsp">
+			</forward>
+			<!--  新闻管理 -->
+			<forward name="defineNewsContentManage"
+				path="/view/newsmanage/news/defineNewsContentManage.jsp">
+			</forward>
+			<forward name="newsItemsBigTreeInit"
+				path="/view/newsmanage/news/defineNewsTree.jsp">
+			</forward>
+
+			<forward name="newsContentManageInit"
+				path="/view/newsmanage/news/newsContentManageInit.jsp">
+			</forward>
+			<forward name="addNewsContentManage"
+				path="/view/newsmanage/news/addNewsContentManage.jsp">
+			</forward>
+			<forward name="amendNewsContentManage"
+				path="/view/newsmanage/news/amendNewsContentManage.jsp">
+			</forward>
+			
+			<!-- 首页操作 -->
+			<forward name="defindFirstPage"
+				path="/view/newsmanage/property/defindFirstPage.jsp">
+			</forward>
+			<forward name="findAddFirstPage"
+				path="/view/newsmanage/property/addFirstPage.jsp">
+			</forward>
+			<forward name="findAmendFirstPage"
+				path="/view/newsmanage/property/amendFirstPage.jsp">
+			</forward>
+
+			<forward name="defindSmallFirstPage"
+				path="/view/newsmanage/property/defindSmallFirstPage.jsp">
+			</forward>
+			<forward name="findAddSmallFirstPage"
+				path="/view/newsmanage/property/addSmallFirstPage.jsp">
+			</forward>
+			<forward name="findAmendSmallFirstPage"
+				path="/view/newsmanage/property/amendSmallFirstPage.jsp">
+			</forward>
+			<!-- 小类审核设置 -->
+			<forward name="newsItemSmallCheckFlag"
+				path="/view/newsmanage/property/newsItemSmallCheckFlag.jsp">
+			</forward>
+			<!-- 新闻审核 -->
+			<forward name="newsContentCheck"
+				path="/view/newsmanage/news/newsContentCheck.jsp">
+			</forward>
+			<forward name="error" path="/error.jsp"></forward>
+		</action>
+		<!-- 新闻前台管理 -->
+		<action attribute="newsClientActionForm"
+			input="/form/newsClientAction.jsp" name="newsClientActionForm"
+			path="/client/newsClient" parameter="method" scope="request"
+			type="com.lcweb.struts.action.NewsClientAction">
+
+			<forward name="FloatAd"
+				path="/client/news/content/floatIndexAd.jsp">
+			</forward>
+			<forward name="hotPictureText"
+				path="/client/news/content/hotpicturetext.jsp">
+			</forward>
+			<forward name="trend"
+				path="/client/news/content/teachertrend.jsp">
+			</forward>
+			<forward name="ezNews"
+				path="/client/news/content/eznews.jsp">
+			</forward>
+			<forward name="infoNotice"
+				path="/client/news/content/infonotice.jsp">
+			</forward>
+			<forward name="relationLink"
+				path="/client/news/content/relationlink.jsp">
+			</forward>
+			<forward name="ezmedia"
+				path="/client/news/content/ezmedia.jsp">
+			</forward>
+			<forward name="footer"
+				path="/client/news/content/footer.jsp">
+			</forward>
+			<forward name="bottomMenu"
+				path="/client/news/content/bottomMenu.jsp">
+			</forward>
+			<forward name="photoLinks"
+				path="/client/news/content/photoLinks.jsp">
+			</forward>
+		</action>
+
+		
+		<action path="/view/newsmanageWebNote" parameter="method"
+			scope="request" type="com.lcweb.struts.action.NewsManageAction">
+			<forward name="defineNewsContentManage"
+				path="/view/newsmanage/news/defineNewsContentManage.jsp">
+			</forward>
+			<forward name="newsItemsBigTreeInit"
+				path="/view/newsmanage/news/defineNewsTree.jsp">
+			</forward>
+
+			<forward name="newsContentManageInit"
+				path="/view/newsmanage/news/newsContentManageInit.jsp">
+			</forward>
+			<forward name="addNewsContentManage"
+				path="/view/newsmanage/news/addNewsContentManage.jsp">
+			</forward>
+			<forward name="amendNewsContentManage"
+				path="/view/newsmanage/news/amendNewsContentManage.jsp">
+			</forward>
+			
+		</action>
+
+		<!--  
+			 
+			Description:Organization Manage       
+		-->
+		<!-- the oranization set start -->
+		<action attribute="newsOrgMangeForm" name="newsOrgMangeForm"
+			path="/view/newsorg" parameter="method" scope="request"
+			type="com.lcweb.struts.action.NewsOrgAction">
+			<!-- the college setting start  -->
+			<forward name="defindSchCollDept"
+				path="/view/newsmanage/newsorg/defindSchCollDept.jsp">
+			</forward>
+			<forward name="addSchCollDept"
+				path="/view/newsmanage/newsorg/addSchCollDept.jsp">
+			</forward>
+			<forward name="amendSchCollDept"
+				path="/view/newsmanage/newsorg/amendSchCollDept.jsp">
+			</forward>
+			<!-- the college setting end  -->
+			<forward name="error" path="/error.jsp"></forward>
+		</action>
+		
+		<!-- monitor start -->
+		<action attribute="monitorManageForm" name="monitorManageForm" 
+			path="/view/monitor" parameter="method" scope="request"
+			type="com.lcweb.struts.action.MonitorManageAction">
+		</action>
+		<!-- monitor end -->
+		
+		<!-- member(background frontUser) start  -->
+		<action attribute="memberManageForm" name="memberManageForm" 
+			path="/view/membermanage" parameter="method" scope="request"
+			type="com.lcweb.struts.action.MemberManageAction">
+			<forward name="memberList" path="/view/membermanage/memberList.jsp"></forward>
+		</action>
+		<!-- member(background frontUser) end  -->
+		
+		<!-- message start  -->
+		<action attribute="messageForm" name="messageForm" 
+			path="/front/message" parameter="method" scope="request"
+			type="com.lcweb.struts.action.MessageAction">
+			<forward name="messageIndex" path="/client/index/content/message/messageIndex.jsp"></forward>
+			<forward name="toAddMessage" path="/client/index/content/message/messageAdd.jsp"></forward>
+			<forward name="success" path="/client/index/content/message/success.jsp"></forward>
+			<forward name="fail" path="/client/index/content/message/fail.jsp"></forward>
+		</action>
+		<!-- message end -->
+		
+		<!-- message(background frontmessage) end  -->
+		<action attribute="messageForm" name="messageForm" 
+			path="/view/messagemanage" parameter="method" scope="request"
+			type="com.lcweb.struts.action.MessageManageAction">
+			<forward name="messageList" path="/view/messagemanage/messageList.jsp"></forward>
+			<forward name="messageDetails" path="/view/messagemanage/messageDetails.jsp"></forward>
+		</action>
+		<!-- message(background frontmessage) end  -->
+		
+		<!-- vote(background vote) end  -->
+		<action attribute="voteForm" name="voteForm" 
+			path="/view/votemanage" parameter="method" scope="request"
+			type="com.lcweb.struts.action.VoteManageAction">
+			<forward name="voteList" path="/view/votemanage/voteTitleList.jsp"></forward>
+			<forward name="voteTitleAdd" path="/view/votemanage/voteTitleAdd.jsp"></forward>
+			<forward name="enterUpdateVoteTitle" path="/view/votemanage/voteTitleUpdate.jsp"></forward>
+			<forward name="voteTitleDetails" path="/view/votemanage/voteTitleDetails.jsp"></forward>
+		</action>
+		<!-- vote(background vote) end  -->
+		
+		<!-- vote(front vote) start  -->
+		<action attribute="voteForm" name="voteForm" 
+			path="/front/vote" parameter="method" scope="request"
+			type="com.lcweb.struts.action.VoteManageAction">
+			<forward name="havaBallot" path="/client/index/content/vote/havaBallot.jsp"></forward>
+			<forward name="fail" path="/client/index/content/vote/fail.jsp"></forward>
+			<forward name="voteFrontList" path="/client/index/content/vote/voteIndex.jsp"></forward>
+		</action>
+		<!-- vote(front vote) end  -->
+		
+		<!-- front login start -->
+		<action path="/front/login" parameter="method" scope="request" 
+			name="frontUserFrom" type="com.lcweb.struts.action.FrontUserAction"
+		>
+		</action>
+		<action path="/front/index" forward="/front/index.jsp"/>
+		
+		<!-- 验证码 -->
+		<action path="/codeImageAction" type="com.lcweb.struts.action.CodeImageAction"/>
+		
+		<!-- find password related -->
+		<action path="/front/findpassword" forward="/client/index/content/login_reg/findPassword.jsp"/>
+		<action path="/front/post" name="findPasswordForm" scope="request" parameter="method"
+			 type="com.lcweb.struts.action.FindPasswordAction">
+			<forward name="findPassword2" path="/client/index/content/login_reg/findPassword2.jsp"/>
+			<forward name="findPassword3" path="/client/index/content/login_reg/findPassword3.jsp"/>
+			<forward name="errorresult" path="/client/index/content/login_reg/errorresult.jsp"/>
+			<forward name="frontIndex" redirect="true" path="/"/>
+		</action>
+		<!-- font login end -->
+	</action-mappings>
+	<controller
+		processorClass="org.springframework.web.struts.AutowiringRequestProcessor">
+	</controller>
+	<message-resources
+		parameter="com.lcweb.struts.ApplicationResources" />
+</struts-config>
+

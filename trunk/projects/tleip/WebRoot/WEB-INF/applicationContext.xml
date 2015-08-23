@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+    
+    
+    <import resource="applicationContext_dao.xml"/>
+    <import resource="applicationContext_service.xml"/>
+    
+    <bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>				 
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName">
+		   <value>${jdbc.driverClassName}</value>
+		</property>
+		<property name="url">
+		   <value>${jdbc.url}</value>
+		</property>
+		<property name="username" >
+		  <value>${jdbc.username}</value>
+		</property>
+		<property name="password">
+		  <value>${jdbc.password}</value>
+		</property>
+		<property name="initialSize">
+		  <value>${datasource.initialSize}</value>
+		</property>
+		<property name="maxIdle">
+		  <value>${datasource.maxIdle}</value>
+		</property>
+		<property name="minIdle" >
+		  <value>${datasource.minIdle}</value>
+		</property>
+		<property name="maxActive" >
+		  <value>${datasource.maxActive}</value>
+		</property>		
+		<property name="removeAbandoned" >
+		  <value>${datasource.removeAbandoned}</value>
+		</property>
+		<property name="maxWait" >
+		  <value>${datasource.maxWait}</value>
+		</property>
+		<property name="defaultAutoCommit">
+		  <value>${datasource.defaultAutoCommit}</value>
+		</property>
+	</bean>
+	
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					${hibernate.dialect}
+				</prop>
+				<prop key="hibernate.show_sql">
+					${hibernate.showsql}
+				</prop>
+			</props>
+		</property>
+		<property name="mappingDirectoryLocations">
+		    <list>
+		       <value>classpath:/com/lcweb/hibernate/hbm/</value>
+		    </list>
+		</property>		
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	    <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="txProxyTemplate" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" abstract="true">
+	    <property name="transactionManager" ref="transactionManager"></property>
+	    <property name="transactionAttributes">
+	       <props>
+	        <prop key="add*">PROPAGATION_REQUIRED</prop>
+	        <prop key="save*">PROPAGATION_REQUIRED</prop>
+	        <prop key="del*">PROPAGATION_REQUIRED</prop>
+	        <prop key="update*">PROPAGATION_REQUIRED</prop>
+	        <prop key="execute*">PROPAGATION_REQUIRED</prop>
+	        <prop key="list*">PROPAGATION_REQUIRED,readOnly</prop>
+	        <prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+	        <prop key="query*">PROPAGATION_REQUIRED,readOnly</prop>
+	        <prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+	        <prop key="load*">PROPAGATION_REQUIRED,readOnly</prop>
+	       </props>
+	    </property>
+	</bean>
+    <bean id="JdbcTemp" class="com.lcweb.commons.JDBCTemplateImp">
+         <property name="dataSource" ref="dataSource"></property>    
+    </bean>
+    <bean id="JdbcTempProxy" parent="txProxyTemplate">
+       <property name="target" ref="JdbcTemp"></property>
+    </bean>
+     <bean id="checkRight" class="com.lcweb.commons.CheckRight">
+         <property name="jt" ref="JdbcTemp"></property>
+    </bean>
+    <bean id="loginfilterProxy" class="com.lcweb.commons.CheckLoginFilter">
+         <property name="cr" ref="checkRight"></property>
+    </bean> 
+    <bean id="baseDao" class="com.lcweb.dao.base.BaseDaoImpl">
+         <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="baseDaoProxy" parent="txProxyTemplate">
+       <property name="target" ref="baseDao"></property>
+    </bean>
+    <bean id="baseService" class="com.lcweb.service.base.BaseServiceImpl">
+         <property name="baseDao" ref="baseDaoProxy"></property>
+    </bean>
+     
+	
+	
+	 <!-- 配置Advice
+   	
+    
+   <bean id="checkRightInterceptor" class="com.lcweb.commons.CheckRightInterceptor" />
+   <bean id="purviewAdvisor"
+         class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+         <property name="advice">
+             <ref local="checkRightInterceptor" />
+         </property>
+         <property name="patterns">
+             <list>
+                 <value>.*moduleOperationRight.*</value>
+             </list>
+         </property>
+     </bean>
+
+     <bean id="beanNameAutoProxyCreator"
+         class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+         <property name="beanNames">
+             <value>checkRight</value>
+         </property>
+         <property name="interceptorNames">
+             <list>
+                 <value>purviewAdvisor</value>
+             </list>
+         </property>
+         <property name="proxyTargetClass" >
+		   <value>true</value>
+		  </property>
+     </bean> -->  
+	
+	<!-- end the configuration -->
+</beans>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ggeip">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+<wb-resource deploy-path="/WEB-INF/classes" source-path="/404"/>
+<wb-resource deploy-path="/WEB-INF/classes" source-path="/jsfile"/>
+<wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
+        <property name="context-root" value="/jxeip"/>
+        <property name="java-output-path" value="/jxeip/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

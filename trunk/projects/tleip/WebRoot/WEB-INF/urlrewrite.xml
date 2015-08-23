@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlrewrite>
+
+	<rule>
+		<note>大类</note>
+		<from>^/client/itembig([0-9]+)\.html$</from>
+		<to type="forward">
+			/client/newsClient.do?method=getSecondNewsContentForPage&amp;classId=$1
+		</to>
+	</rule>
+	<rule>
+		<note>小类</note>
+		<from>^/client/itembig([0-9]+)/itemsmall([0-9]+)\.html$</from>
+		<to type="forward">
+			/client/newsClient.do?method=getSecondNewsContentForPage&amp;classId=$1&amp;typeId=$2
+		</to>
+	</rule>
+	<rule>
+		<note>action to html</note>
+		<from>^/client/([a-zA-Z]+)/([a-zA-Z]+).html$</from>
+		<to>/client/$1.do?method=$2</to>
+	</rule>
+	<rule>
+		<note>action to html</note>
+		<from>
+			^/client/([a-zA-Z]+)/itembig([0-9]+)/itemsmall([0-9]+)\.html$
+		</from>
+		<to>
+			/client/newsClient.do?method=$1&amp;classId=$2&amp;typeId=$3
+		</to>
+	</rule>
+	<rule>
+		<note>具体方法</note>
+		<from>
+			^/client/([a-zA-Z]+)/itembig([0-9]+)/itemsmall([0-9]+)\.html$
+		</from>
+		<to type="forward">
+			/client/newsClient.do?method=get$1ForPage&amp;classId=$2&amp;typeId=$3
+		</to>
+	</rule>
+	<rule>
+		<note>校园风采具体方法</note>
+		<from>
+			^/client/([a-zA-Z]+)/news([0-9]+)\.html$
+		</from>
+		<to type="forward">
+			/client/newsClient.do?method=$1&amp;newsId=$2
+		</to>
+	</rule>
+	<rule>
+		<note>校园风采更多方法</note>
+		<from>
+			^/client/([a-zA-Z]+)/page([0-9]+)\.html$
+		</from>
+		<to type="forward">
+			/client/newsClient.do?method=$1&amp;pagesize=$2
+		</to>
+	</rule>
+
+</urlrewrite>
+

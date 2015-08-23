@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+	<!-- 登陆 -->
+	<bean id="LoginService"
+		class="com.lcweb.service.login.LoginServiceImpl">
+		<property name="loginDao" ref="LoginDaoProxy"></property>
+		<property name="baseDao" ref="baseDaoProxy"></property>
+	</bean>
+
+	<!-- 角色管理 -->
+	<bean id="RightManageService"
+		class="com.lcweb.service.rightmanage.RightManageServiceImpl">
+		<property name="rightManageDao" ref="rightManageDaoProxy"></property>
+		<property name="baseDao" ref="baseDaoProxy"></property>
+	</bean>
+	<!-- News manage module -->
+	<bean id="NewsManageService"
+		class="com.lcweb.service.newsmanage.NewsManageServiceImpl">
+		<property name="newsManageDao" ref="newsManageDaoProxy"></property>
+		<property name="baseDao" ref="baseDaoProxy"></property>
+		<property name="newsOrgService" ref="NewsOrgService"></property>
+	</bean>
+
+     <bean id="NewsClientService" class="com.lcweb.service.newsclient.NewsClientServiceImpl">
+         <property name="newsClientDao" ref="newsClientDaoProxy"></property>
+         <property name="newsManageDao" ref="newsManageDaoProxy"></property>
+         <property name="newsManageService" ref="NewsManageService"></property>
+         <property name="baseDao" ref="baseDaoProxy"></property>
+     </bean>
+
+	<!-- newsTemplate module end -->
+	<!-- org manage -->
+	<bean id="NewsOrgService"
+		class="com.lcweb.service.org.NewsOrgServiceImpl">
+		<property name="newsOrgDao" ref="newsOrgDaoProxy"></property>
+		<property name="baseDao" ref="baseDaoProxy"></property>
+	</bean>
+	
+	<bean id="MonitorManageService"
+		class="com.lcweb.service.monitor.MonitorManageServiceImpl">
+		<property name="baseDao" ref="baseDaoProxy"></property>
+	</bean>
+	
+	<bean id="messageService" class="com.lcweb.service.message.MessageServiceImpl">
+		<property name="baseDao" ref="baseDaoProxy"></property>
+	</bean>
+	
+	<bean id="memberManageService" class="com.lcweb.service.member.MemberManageServiceImpl">
+		<property name="memberManageDao" ref="memberManageDaoProxy"></property>
+		<property name="baseDao" ref="baseDaoProxy"></property>
+	</bean>
+	
+	<bean id="voteService" class="com.lcweb.service.vote.VoteServiceImpl">
+		<property name="baseDao" ref="baseDaoProxy"></property>
+	</bean>
+	
+	<bean id="voteUserService" class="com.lcweb.service.vote.VoteUserServiceImpl">
+		<property name="baseDao" ref="baseDaoProxy"></property>
+	</bean>
+	
+	<!-- 前台登录 -->
+	<bean id="frontLoginService"
+		class="com.lcweb.service.front.FrontLoginServiceImpl">
+		<property name="frontLoginDao" ref="frontLoginDaoProxy"></property>
+		<property name="baseDao" ref="baseDaoProxy"></property>
+	</bean>
+</beans>

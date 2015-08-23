@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="hrDept" extends="base" namespace="/view">
+		<!-- 部门管理 -->
+		<action name="hrDept" class="hrDeptAction">
+			<result name="input">
+				/core/system/dept/${#parameters.inputPage[0]}
+			</result>
+			<result name="main">/core/system/dept/main.jsp</result>
+			<result name="entryAdd">/core/system/dept/add.jsp</result>
+			<result name="entryUpdate">
+				/core/system/dept/update.jsp
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="sysMenu" extends="base" namespace="/view">
+		<action name="sysMenu" class="sysMenuAction">
+			<result name="input">/core/system/menu/${#parameters.inputPage[0]}</result>
+			<result name="info">/core/system/menu/input.jsp</result>
+			<result name="list">/core/system/menu/list.jsp</result>
+			<result name="main">/core/system/menu/main.jsp</result>
+			<result name="entryAdd">/core/system/menu/add.jsp</result>
+			<result name="entryUpdate">/core/system/menu/update.jsp</result>
+		</action>
+	</package>
+</struts>

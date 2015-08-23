@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="srfcode">
+
+    <!-- News Start -->
+    <select id="queryAllNewsItemBig">
+        select nib
+        from NewsItemBig nib
+        where 1=1
+        <dynamic>
+            <isNotEmpty property="classId">
+                and nib.classId = :classId
+            </isNotEmpty>
+            <isNotEmpty property="yxdm">
+                and nib.yxdm = :yxdm
+            </isNotEmpty>
+            <isNotEmpty property="ifIndex">
+                and nib.ifIndex = :ifIndex
+            </isNotEmpty>
+            <isNotEmpty property="isFirstPage">
+                and nib.yxdm = :isFirstPage
+            </isNotEmpty>
+            <isNotEmpty property="isNotFirstPage">
+                and nib.yxdm != :isNotFirstPage
+            </isNotEmpty>
+            <isNotEmpty property="ifDisplay">
+                and nib.ifDisplay = :ifDisplay
+            </isNotEmpty>
+            
+            <!--添加是否显示广告  2009-12-21-->
+            <isNotEmpty property="ifHaveAd">
+                and nib.ifHaveAd = :ifHaveAd
+            </isNotEmpty>
+            
+            <isNotEmpty property="classIdList">
+               and nib.classId in 
+		      	<iterate prepend="" property="classIdList" open="(" close=")" conjunction=",">
+		          	'$classIdList[]$'
+		      	</iterate>
+	  		</isNotEmpty>
+        </dynamic>
+        order by nib.orderId
+    </select>
+    <select id="getSchCollegeDepartment">
+        select scd
+        from SchCollegeDepartment scd
+        where 1=1
+        <dynamic>
+            <isNotEmpty property="yxdm">
+                and scd.yxdm = :yxdm
+            </isNotEmpty>
+            <isNotEmpty property="xxdm">
+                and scd.xxdm = :xxdm
+            </isNotEmpty>
+        </dynamic>
+        order by scd.yxdm asc
+    </select>
+    <select id="queryAllNewsItemSmall">
+        select nis
+        from NewsItemSmall nis
+        where 1=1
+        <dynamic>
+            <isNotEmpty property="classId">
+                and nis.newsItemBig.classId = :classId
+            </isNotEmpty>
+            <isNotEmpty property="yxdm">
+                and nis.newsItemBig.yxdm = :yxdm
+            </isNotEmpty>
+            <isNotEmpty property="typeId">
+                and nis.typeId = :typeId
+            </isNotEmpty>
+            <isNotEmpty property="typeName">
+                and nis.typeName = :typeName
+            </isNotEmpty>
+            <isNotEmpty property="ifDisplay">
+                and nis.ifDisplay = :ifDisplay
+            </isNotEmpty>
+        </dynamic>
+        order by nis.orderId
+    </select>
+    <select id="queryAllNewsNavigation">
+        select nin
+        from NewsItemNavigation nin
+        where 1=1
+        <dynamic>
+            <isNotEmpty property="classId">
+                and nin.newsItemBig.classId = :classId
+            </isNotEmpty>
+            <isNotEmpty property="navigationId">
+                and nin.navigationId = :navigationId
+            </isNotEmpty>
+            <isNotEmpty property="navigationName">
+                and nin.navigationName = :navigationName
+            </isNotEmpty>
+        </dynamic>
+        order by nin.orderId
+    </select>
+
+    <select id="queryAllNewsAdType">
+        select nat
+        from NewsAdType nat
+        where 1=1
+        <dynamic>
+            <isNotEmpty property="classId">
+                and nat.newsItemBig.classId = :classId
+            </isNotEmpty>
+            <isNotEmpty property="adTypeId">
+                and nat.adTypeId = :adTypeId
+            </isNotEmpty>
+            <isNotEmpty property="adTypeName">
+                and nat.adTypeName = :adTypeName
+            </isNotEmpty>
+        </dynamic>
+    </select>
+    
+    
+    <select id="queryAllNewsAdManage">
+        select nam
+        from NewsAdManage nam
+        where 1=1
+        <dynamic>
+            <isNotEmpty property="adTypeId">
+                and nam.newsAdType.adTypeId = :adTypeId
+            </isNotEmpty>
+            <isNotEmpty property="adName">
+                and nam.adName = :adName
+            </isNotEmpty>
+            <isNotEmpty property="classId">
+                and nam.newsAdType.newsItemBig.classId = :classId
+            </isNotEmpty>
+            <isNotEmpty property="adTypeTag">
+                and nam.newsAdType.adTypeTag = :adTypeTag
+            </isNotEmpty>
+        </dynamic>
+    </select>
+    <select id="queryAllNewsContentManage">
+        select ncm
+        from NewsContentManage ncm join ncm.newsItemSmalls s
+        where 1=1
+        <dynamic>
+            <isNotEmpty property="newsId">
+                and ncm.newsId = :newsId
+            </isNotEmpty>
+            <isNotEmpty property="typeId">
+                and s.typeId = :typeId
+            </isNotEmpty>
+            <isNotEmpty property="classId">
+                and s.newsItemBig.classId = :classId
+            </isNotEmpty>
+			<isNotEmpty property="ifImgNews">
+                and ncm.ifImgNews = :ifImgNews
+            </isNotEmpty>
+			<isNotEmpty property="ifTitleImg">
+                and ncm.ifTitleImg = :ifTitleImg
+            </isNotEmpty>
+			<isNotEmpty property="ifTopRow">
+                and ncm.ifTopRow = :ifTopRow
+            </isNotEmpty>
+            <isNotEmpty property="ifRecommend">
+                and ncm.ifRecommend = :ifRecommend
+            </isNotEmpty>
+            <isNotEmpty property="checkFlag">
+                and ncm.checkFlag = :checkFlag
+            </isNotEmpty>
+            <isNotEmpty property="ifVodNews">
+                and ncm.ifVodNews = :ifVodNews
+            </isNotEmpty>
+            <isNotEmpty property="ifDisplay">
+                and s.ifDisplay = :ifDisplay
+            </isNotEmpty>           
+        </dynamic>
+        order by ncm.ifTopRow desc,ncm.newsDate desc
+    </select>
+    <select id="queryNewsItemConfig">
+        select nic
+        from NewsItemConfig nic
+        where 1=1
+        <dynamic>
+            <isNotEmpty property="typeId">
+                and nic.typeId = :typeId
+            </isNotEmpty>
+        </dynamic>
+    </select>
+    <select id="getMaxOrderIdByTableName">
+        select max(c.orderId) from  
+        <dynamic>
+            <isEqual property="tableType" compareValue="NewsItemBig">
+                NewsItemBig c
+            </isEqual>
+            <isEqual property="tableType" compareValue="NewsItemSmall">
+                NewsItemSmall c 
+            </isEqual>
+            <isEqual property="tableType" compareValue="NewsItemNavigation">
+                NewsItemNavigation c 
+            </isEqual>
+        </dynamic>
+        where 1= 1
+        <dynamic>
+            <isEqual property="tableType" compareValue="NewsItemBig">
+                <isNotEmpty property="yxdm">
+	                and c.yxdm = :yxdm
+	            </isNotEmpty>
+	            <isNotEmpty property="ifIndex">
+	                and c.ifIndex = :ifIndex
+	            </isNotEmpty>
+            </isEqual>
+            <isEqual property="tableType" compareValue="NewsItemSmall">
+                <isNotEmpty property="classId">
+	                and c.newsItemBig.classId = :classId
+	            </isNotEmpty>
+            </isEqual>
+            <isEqual property="tableType" compareValue="NewsItemNavigation">
+                <isNotEmpty property="classId">
+	                and c.newsItemBig.classId = :classId
+	            </isNotEmpty>
+            </isEqual>
+        </dynamic>      
+    </select> 
+    <!-- News End -->
+    <!-- SysModule Begin -->
+    <select id="queryAllSysModule">
+        select max(sm.moduleId)
+        from SysModule sm
+        where 1=1
+        <dynamic>
+     		<isNotEmpty property="upModule">
+     		   and sm.upModule =:upModule
+     		   and sm.url is not null
+     		</isNotEmpty>  
+     		<isNotEmpty property="moduleName">
+     		   and sm.moduleName =:moduleName
+     		</isNotEmpty>
+     		<isNotEmpty property="yxdm">
+     		   and sm.yxdm =:yxdm
+     		</isNotEmpty>
+     		<isNotEmpty property="url">
+     		   and sm.url not like '%$url$%'
+     		</isNotEmpty>
+     		<isNotEmpty property="urlClassId">
+     		   and sm.url like '%$urlClassId$%'
+     		</isNotEmpty>
+     		<isNotEmpty property="urlTypeId">
+			      and sm.url  not like '%$urlTypeId$%'
+			</isNotEmpty>
+        </dynamic>
+     </select>
+     <select id="querySysModule">
+        select sm
+        from SysModule sm
+        where 1=1
+        <dynamic>
+           <isNotEmpty property="moduleName">
+              and sm.moduleName =:moduleName
+           </isNotEmpty>
+           <isNotEmpty property="yxdm">
+              and sm.yxdm =:yxdm
+           </isNotEmpty>
+             <isNotEmpty property="url">
+              and sm.url =:url
+           </isNotEmpty>
+        </dynamic>
+     </select>
+    <!-- SysModule End -->
+</sqlMap>

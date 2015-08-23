@@ -1,0 +1,1659 @@
+alter   table   sys_module   ALTER   COLUMN   url   varchar(255)
+ delete from [LCsoftweb].[dbo].sys_module
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901000000','首页','#','10579','tb_12.gif',null,'1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902000000','新闻栏目结构图',null,'10579','tb_12.gif',null,'0');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010000','左边图片','newsmanage.do?method=findNewsContentManage&classId=10579100001&parentModuleFlag=news_content_leftpicture','9901000000','tb_12.gif','news_content_leftpicture','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010100','左边图片','newsmanage.do?method=findNewsContentManage&classId=10579100001&typeId=120&parentModuleFlag=news_content_leftpicture_small','9901010000','tb_12.gif','news_content_leftpicture_small','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010101','新增',null,'9901010100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010102','查询',null,'9901010100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010103','修改',null,'9901010100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010104','删除',null,'9901010100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020000','右边图片链接','newsmanage.do?method=findNewsContentManage&classId=10579100006&parentModuleFlag=news_content_rightpicture','9901000000','tb_12.gif','news_content_rightpicture','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020101','新增',null,'9901020100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020103','修改',null,'9901020100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020104','删除',null,'9901020100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020201','新增',null,'9901020200','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020202','查询',null,'9901020200','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020203','修改',null,'9901020200','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020204','删除',null,'9901020200','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020300','质量工程','newsmanage.do?method=findNewsContentManage&classId=10579100006&typeId=184&parentModuleFlag=news_content_rightpicture_if','9901020000','tb_12.gif','news_content_rightpicture_if','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020301','新增',null,'9901020300','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020302','查询',null,'9901020300','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020303','修改',null,'9901020300','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020304','删除',null,'9901020300','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020400','OA系统','newsmanage.do?method=findNewsContentManage&classId=10579100006&typeId=197&parentModuleFlag=news_content_rightpicture_oa','9901020000','tb_12.gif','news_content_rightpicture_oa','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020401','新增',null,'9901020400','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020402','查询',null,'9901020400','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020403','修改',null,'9901020400','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020404','删除',null,'9901020400','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020200','招生就业','newsmanage.do?method=findNewsContentManage&classId=10579100006&typeId=183&parentModuleFlag=news_content_rightpicture_st','9901020000','tb_12.gif','news_content_rightpicture_st','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020100','图书馆','newsmanage.do?method=findNewsContentManage&classId=10579100006&typeId=125&parentModuleFlag=news_content_rightpicture_lb','9901020000','tb_12.gif','news_content_rightpicture_lb','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030000','东职新闻','newsmanage.do?method=findNewsContentManage&classId=10579100002&parentModuleFlag=news_content_main_news','9901000000','tb_12.gif','news_content_main_news','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030100','东职新闻','newsmanage.do?method=findNewsContentManage&classId=10579100002&typeId=121&parentModuleFlag=news_content_main','9901030000','tb_12.gif','news_content_main','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030101','新增',null,'9901030100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030102','查询',null,'9901030100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030103','修改',null,'9901030100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030104','删除',null,'9901030100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040000','通知公告','newsmanage.do?method=findNewsContentManage&classId=10579100005&parentModuleFlag=news_content_affaic_news','9901000000','tb_12.gif','news_content_affaic_news','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040100','通知公告','newsmanage.do?method=findNewsContentManage&classId=10579100005&typeId=124&parentModuleFlag=news_content_affaic','9901040000','tb_12.gif','news_content_affaic','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040101','新增',null,'9901040100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040102','查询',null,'9901040100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040103','修改',null,'9901040100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040104','删除',null,'9901040100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050000','图文热点','newsmanage.do?method=findNewsContentManage&classId=10579100003&parentModuleFlag=news_content_hotspot_news','9901000000','tb_12.gif','news_content_hotspot_news','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050100','图文热点','newsmanage.do?method=findNewsContentManage&classId=10579100003&typeId=122&parentModuleFlag=news_content_hotspot','9901050000','tb_12.gif','news_content_hotspot','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050101','新增',null,'9901050100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050102','查询',null,'9901050100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050103','修改',null,'9901050100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050104','删除',null,'9901050100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060000','联系我们','newsmanage.do?method=findNewsContentManage&classId=10579100011&parentModuleFlag=news_content_contact_news','9901000000','tb_12.gif','news_content_contact_news','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060100','联系我们','newsmanage.do?method=findNewsContentManage&classId=10579100011&typeId=126&parentModuleFlag=news_content_contact','9901060000','tb_12.gif','news_content_contact','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060101','新增',null,'9901060100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060102','查询',null,'9901060100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060103','修改',null,'9901060100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060104','删除',null,'9901060100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070102','查询',null,'9901070100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070103','修改',null,'9901070100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070104','删除',null,'9901070100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080000','底部信息','newsmanage.do?method=findNewsContentManage&classId=10579100012&parentModuleFlag=news_content_footer_news','9901000000','tb_12.gif','news_content_footer_news','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080100','底部信息','newsmanage.do?method=findNewsContentManage&classId=10579100012&typeId=128&parentModuleFlag=news_contact_footer','9901080000','tb_12.gif','news_contact_footer','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080101','新增',null,'9901080100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080102','查询',null,'9901080100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080103','修改',null,'9901080100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080104','删除',null,'9901080100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090000','相关连接','newsmanage.do?method=findNewsContentManage&classId=10579100007&parentModuleFlag=news_content_rl_news','9901000000','tb_12.gif','news_content_rl_news','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090100','管理群团站点导航','newsmanage.do?method=findNewsContentManage&classId=10579100007&typeId=199&parentModuleFlag=news_contact_rl','9901090000','tb_12.gif','news_contact_rl','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090101','新增',null,'9901090100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090102','查询',null,'9901090100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090103','修改',null,'9901090100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101010100','查询',null,'0101010000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101010200','新增',null,'0101010000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101010300','修改',null,'0101010000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101010400','删除',null,'0101010000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070000','书记院长信箱','newsmanage.do?method=findNewsContentManage&classId=10579100010&parentModuleFlag=news_content_email_news','9901000000','tb_12.gif','news_content_email_news','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070100','书记院长信箱','newsmanage.do?method=findNewsContentManage&classId=10579100010&typeId=127&parentModuleFlag=news_content_email','9901070000','tb_12.gif','news_content_email','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090104','删除',null,'9901090100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090200','教学辅助站点导航','newsmanage.do?method=findNewsContentManage&classId=10579100007&typeId=200&parentModuleFlag=news_contact_jx','9901090000','tb_12.gif','news_contact_jx','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090201','新增',null,'9901090200','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090202','查询',null,'9901090200','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090203','修改',null,'9901090200','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090204','删除',null,'9901090200','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090300','友情鏈接','newsmanage.do?method=findNewsContentManage&classId=10579100007&typeId=129&parentModuleFlag=news_contact_yq','9901090000','tb_12.gif','news_contact_yq','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090301','新增',null,'9901090300','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090302','查询',null,'9901090300','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090303','修改',null,'9901090300','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090304','删除',null,'9901090300','tb_12.gif','delete','1');
+
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030051','新增',null,'9901030000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030052','查询',null,'9901030000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030053','修改',null,'9901030000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901030054','删除',null,'9901030000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040051','新增',null,'9901040000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040052','查询',null,'9901040000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040053','修改',null,'9901040000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901040054','删除',null,'9901040000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050051','新增',null,'9901050000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050052','查询',null,'9901050000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050053','修改',null,'9901050000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901050054','删除',null,'9901050000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060051','新增',null,'9901060000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060052','查询',null,'9901060000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060053','修改',null,'9901060000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901060054','删除',null,'9901060000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070051','新增',null,'9901070000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010000','学校概况','newsmanage.do?method=findNewsContentManage&classId=10579100013&parentModuleFlag=news_content_school','9902000000','tb_12.gif','news_content_school','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010100','学院简介','newsmanage.do?method=findNewsContentManage&classId=10579100013&typeId=154&parentModuleFlag=news_content_schjianjie','9902010000','tb_12.gif','news_content_schjianjie','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010101','新增',null,'9902010100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010102','查询',null,'9902010100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010103','修改',null,'9902010100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010104','删除',null,'9902010100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010200','学院领导','newsmanage.do?method=findNewsContentManage&classId=10579100013&typeId=156&parentModuleFlag=news_content_schld','9902010000','tb_12.gif','news_content_schld','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010201','新增',null,'9902010200','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010202','查询',null,'9902010200','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010203','修改',null,'9902010200','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010204','删除',null,'9902010200','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010300','领导关怀','newsmanage.do?method=findNewsContentManage&classId=10579100013&typeId=159&parentModuleFlag=news_content_schgh','9902010000','tb_12.gif','news_content_schgh','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010301','新增',null,'9902010300','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010302','查询',null,'9902010300','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010303','修改',null,'9902010300','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010304','删除',null,'9902010300','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010400','校园风光','newsmanage.do?method=findNewsContentManage&classId=10579100013&typeId=160&parentModuleFlag=news_content_schfg','9902010000','tb_12.gif','news_content_schfg','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010401','新增',null,'9902010400','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010402','查询',null,'9902010400','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010403','修改',null,'9902010400','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010404','删除',null,'9902010400','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010500','校徽校训','newsmanage.do?method=findNewsContentManage&classId=10579100013&typeId=155&parentModuleFlag=news_content_schxx','9902010000','tb_12.gif','news_content_schxx','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010501','新增',null,'9902010500','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010502','查询',null,'9902010500','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010503','修改',null,'9902010500','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010504','删除',null,'9902010500','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070052','查询',null,'9901070000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070053','修改',null,'9901070000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070054','删除',null,'9901070000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080051','新增',null,'9901080000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080052','查询',null,'9901080000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080053','修改',null,'9901080000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901080054','删除',null,'9901080000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090051','新增',null,'9901090000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090052','查询',null,'9901090000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090053','修改',null,'9901090000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901090054','删除',null,'9901090000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100051','新增',null,'9901100000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100052','查询',null,'9901100000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100053','修改',null,'9901100000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100054','删除',null,'9901100000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110051','新增',null,'9901110000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110052','查询',null,'9901110000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110053','修改',null,'9901110000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110054','删除',null,'9901110000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120051','新增',null,'9901120000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120052','查询',null,'9901120000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120053','修改',null,'9901120000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120054','删除',null,'9901120000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010051','新增',null,'9902010000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010052','查询',null,'9902010000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010053','修改',null,'9902010000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902010054','删除',null,'9902010000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020051','新增',null,'9902020000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020052','查询',null,'9902020000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020053','修改',null,'9902020000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020054','删除',null,'9902020000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030051','新增',null,'9902030000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030052','查询',null,'9902030000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030053','修改',null,'9902030000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030054','删除',null,'9902030000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040051','新增',null,'9902040000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040052','查询',null,'9902040000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040053','修改',null,'9902040000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040054','删除',null,'9902040000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050051','新增',null,'9902050000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050052','查询',null,'9902050000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050053','修改',null,'9902050000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050054','删除',null,'9902050000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0100000000','系统管理',null,'0000000000','tb_12.gif',null,'1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101000000','系统管理',null,'0100000000','tb_12.gif',null,'1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101010000','单位信息','view/rightManage.do?method=queryUnit','0101000000','tb_12.gif',null,'1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101020000','部门管理','view/rightManage.do?method=queryDepartment','0101000000','tb_12.gif',null,'1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101030000','部门人员','view/rightManage.do?method=queryDepartmentPerson','0101000000','tb_12.gif',null,'1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101040000','角色管理','view/rightManage.do?method=queryRole','0101000000','tb_12.gif','jsgl','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101040100','新增',null,'0101080000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101040200','查询',null,'0101080000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101040300','修改',null,'0101080000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101040400','删除',null,'0101080000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101050000','角色权限','view/rightManage.do?method=queryRoleRight','0101000000','tb_12.gif','jsqx','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101050100','新增',null,'0101090000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101050200','查询',null,'0101090000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101060000','分配用户权限','view/rightManage.do?method=enterAssignUserRight','0101000000','tb_12.gif','fpyhqs','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101060100','新增',null,'0101100000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101060200','查询',null,'0101100000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101070000','批量分配权限','view/rightManage.do?method=batchAssignUserRight','0101000000','tb_12.gif','plfpqx','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101070100','新增',null,'0101110000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101070200','查询',null,'0101110000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0200000000','信息发布管理',null,'0000000000','tb_12.gif',null,'1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201000000','信息发布管理',null,'0200000000','tb_12.gif',null,'1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201010000','首页大类设置','view/newsmanage.do?method=findFirstPage','0201000000','tb_12.gif','first_news_item_big','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201010100','新增',null,'0201010000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201010200','查询',null,'0201010000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201010300','修改',null,'0201010000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201010400','删除',null,'0201010000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201020000','首页小类设置','view/newsmanage.do?method=findSmallFirstPage','0201000000','tb_12.gif','first_news_item_small','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201020100','新增',null,'0201020000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201020200','查询',null,'0201020000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201020300','修改',null,'0201020000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201020400','删除',null,'0201020000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201030000','院系大类设置','view/newsmanage.do?method=findNewsItemBig','0201000000','tb_12.gif','news_item_big','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201030100','新增',null,'0201030000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201030200','查询',null,'0201030000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201030300','修改',null,'0201030000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201030400','删除',null,'0201030000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201040000','院系小类设置','view/newsmanage.do?method=findNewsItemSmall','0201000000','tb_12.gif','news_item_small','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201040100','新增',null,'0201040000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201040200','查询',null,'0201040000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201040300','修改',null,'0201040000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201040400','删除',null,'0201040000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201050000','栏目导航设置','view/newsmanage.do?method=findNavigation','0201000000','tb_12.gif','news_item_navigation','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201050100','新增',null,'0201050000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201050200','查询',null,'0201050000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201050300','修改',null,'0201050000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201050400','删除',null,'0201050000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201060000','广告种类设置','view/newsmanage.do?method=findNewsAdType','0201000000','tb_12.gif','news_ad_type','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201060100','新增',null,'0201060000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201060200','查询',null,'0201060000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201060300','修改',null,'0201060000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201060400','删除',null,'0201060000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201070000','广告管理','view/newsmanage.do?method=findNewsAdManageInit','0201000000','tb_12.gif','news_ad_manage','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201070100','新增',null,'0201070000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201070200','查询',null,'0201070000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201070300','修改',null,'0201070000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201070400','删除',null,'0201070000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201080000','审核设置','view/newsmanage.do?method=findNewsItemSmallCheckFlag','0201000000','tb_12.gif','news_item_small_check','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201080100','新增',null,'0201080000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201080200','查询',null,'0201080000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201080300','修改',null,'0201080000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201080400','删除',null,'0201080000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201090000','信息发布','view/newsmanage.do?method=findNewsContentManageInit','0201000000','tb_12.gif','news_content_manage','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201090100','新增',null,'0201090000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201090200','查询',null,'0201090000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201090300','修改',null,'0201090000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201090400','删除',null,'0201090000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201100000','新闻审核','view/newsmanage.do?method=findNewsContentCheck','0201000000','tb_12.gif','news_content_check','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201100100','新增',null,'0201100000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201100200','查询',null,'0201100000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201100300','修改',null,'0201100000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0201100400','删除',null,'0201100000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('0101080000','用户管理','view/rightManage.do?method=queryPerson','0101000000','tb_12.gif',null,'1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060051','新增',null,'9902060000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060052','查询',null,'9902060000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060053','修改',null,'9902060000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060054','删除',null,'9902060000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070051','新增',null,'9902070000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070052','查询',null,'9902070000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070053','修改',null,'9902070000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070054','删除',null,'9902070000','tb_12.gif','delete','1');
+
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020102','查询',null,'9901020100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901070101','新增',null,'9901070100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020000','党建园地','newsmanage.do?method=findNewsContentManage&classId=10579100015&parentModuleFlag=news_content_djyd','9902000000','tb_12.gif','news_content_djyd','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020100','理论园地','newsmanage.do?method=findNewsContentManage&classId=10579100015&typeId=166&parentModuleFlag=news_content_llyd','9902020000','tb_12.gif','news_content_llyd','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020101','新增',null,'9902020100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020102','查询',null,'9902020100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020103','修改',null,'9902020100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020104','删除',null,'9902020100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020200','党建动态','newsmanage.do?method=findNewsContentManage&classId=10579100015&typeId=167&parentModuleFlag=news_content_djdt','9902020000','tb_12.gif','news_content_djdt','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020201','新增',null,'9902020200','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020202','查询',null,'9902020200','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020203','修改',null,'9902020200','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020204','删除',null,'9902020200','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020300','廉政建设','newsmanage.do?method=findNewsContentManage&classId=10579100015&typeId=168&parentModuleFlag=news_content_lzjs','9902020000','tb_12.gif','news_content_lzjs','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020301','新增',null,'9902020300','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020302','查询',null,'9902020300','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020303','修改',null,'9902020300','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020304','删除',null,'9902020300','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020400','思想教育','newsmanage.do?method=findNewsContentManage&classId=10579100015&typeId=169&parentModuleFlag=news_content_schjy','9902020000','tb_12.gif','news_content_schjy','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020401','新增',null,'9902020400','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020402','查询',null,'9902020400','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020403','修改',null,'9902020400','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020404','删除',null,'9902020400','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020500','基层组织','newsmanage.do?method=findNewsContentManage&classId=10579100015&typeId=170&parentModuleFlag=news_content_schzuzhi','9902020000','tb_12.gif','news_content_schzuzhi','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020501','新增',null,'9902020500','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020502','查询',null,'9902020500','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020503','修改',null,'9902020500','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902020504','删除',null,'9902020500','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030000','人才培养','newsmanage.do?method=findNewsContentManage&classId=10579100016&parentModuleFlag=news_content_rcpy','9902000000','tb_12.gif','news_content_rcpy','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030100','教学管理','newsmanage.do?method=findNewsContentManage&classId=10579100016&typeId=132&parentModuleFlag=news_content_jxgy','9902030000','tb_12.gif','news_content_jxgy','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030101','新增',null,'9902030100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030102','查询',null,'9902030100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030103','修改',null,'9902030100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030104','删除',null,'9902030100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030200','师资队伍','newsmanage.do?method=findNewsContentManage&classId=10579100016&typeId=133&parentModuleFlag=news_content_szdw','9902030000','tb_12.gif','news_content_szdw','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030201','新增',null,'9902030200','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030202','查询',null,'9902030200','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030203','修改',null,'9902030200','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030204','删除',null,'9902030200','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030300','专业设置','newsmanage.do?method=findNewsContentManage&classId=10579100016&typeId=134&parentModuleFlag=news_content_zysz','9902030000','tb_12.gif','news_content_zysz','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030301','新增',null,'9902030300','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030302','查询',null,'9902030300','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030303','修改',null,'9902030300','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030304','删除',null,'9902030300','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030400','实训基地','newsmanage.do?method=findNewsContentManage&classId=10579100016&typeId=137&parentModuleFlag=news_content_schjy','9902030000','tb_12.gif','news_content_schjy','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030401','新增',null,'9902030400','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030402','查询',null,'9902030400','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030403','修改',null,'9902030400','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030404','删除',null,'9902030400','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030500','继续教育','newsmanage.do?method=findNewsContentManage&classId=10579100016&typeId=138&parentModuleFlag=news_content_jxjy','9902030000','tb_12.gif','news_content_jxjy','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030501','新增',null,'9902030500','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030502','查询',null,'9902030500','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030503','修改',null,'9902030500','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902030504','删除',null,'9902030500','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040000','科研工作','newsmanage.do?method=findNewsContentManage&classId=10579100017&parentModuleFlag=news_content_kygz','9902000000','tb_12.gif','news_content_kygz','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040100','科研动态','newsmanage.do?method=findNewsContentManage&classId=10579100017&typeId=161&parentModuleFlag=news_content_kydt','9902040000','tb_12.gif','news_content_kydt','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040101','新增',null,'9902040100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040102','查询',null,'9902040100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040103','修改',null,'9902040100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040104','删除',null,'9902040100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040200','高教研究','newsmanage.do?method=findNewsContentManage&classId=10579100017&typeId=162&parentModuleFlag=news_content_gjyj','9902040000','tb_12.gif','news_content_gjyj','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040201','新增',null,'9902040200','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040202','查询',null,'9902040200','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040203','修改',null,'9902040200','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040204','删除',null,'9902040200','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040300','产学研合作','newsmanage.do?method=findNewsContentManage&classId=10579100017&typeId=163&parentModuleFlag=news_content_cxyhz','9902040000','tb_12.gif','news_content_cxyhz','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040301','新增',null,'9902040300','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040302','查询',null,'9902040300','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040303','修改',null,'9902040300','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040304','删除',null,'9902040300','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040400','科研成果','newsmanage.do?method=findNewsContentManage&classId=10579100017&typeId=164&parentModuleFlag=news_content_kycg','9902040000','tb_12.gif','news_content_kycg','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040401','新增',null,'9902040400','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040402','查询',null,'9902040400','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040403','修改',null,'9902040400','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902040404','删除',null,'9902040400','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050000','学工在线','newsmanage.do?method=findNewsContentManage&classId=10579100018&parentModuleFlag=news_content_xgzx','9902000000','tb_12.gif','news_content_xgzx','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050100','学生工作网','newsmanage.do?method=findNewsContentManage&classId=10579100018&typeId=139&parentModuleFlag=news_content_xsgzw','9902050000','tb_12.gif','news_content_xsgzw','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050101','新增',null,'9902050100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050102','查询',null,'9902050100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050103','修改',null,'9902050100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050104','删除',null,'9902050100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050200','招生信息','newsmanage.do?method=findNewsContentManage&classId=10579100018&typeId=143&parentModuleFlag=news_content_gjyj','9902050000','tb_12.gif','news_content_gjyj','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050201','新增',null,'9902050200','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050202','查询',null,'9902050200','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050203','修改',null,'9902050200','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050204','删除',null,'9902050200','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050300','就业信息','newsmanage.do?method=findNewsContentManage&classId=10579100018&typeId=144&parentModuleFlag=news_content_jyxx','9902050000','tb_12.gif','news_content_jyxx','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050301','新增',null,'9902050300','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050302','查询',null,'9902050300','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050303','修改',null,'9902050300','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902050304','删除',null,'9902050300','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060000','公共服务','newsmanage.do?method=findNewsContentManage&classId=10579100019&parentModuleFlag=news_content_ggfw','9902000000','tb_12.gif','news_content_ggfw','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060100','校务服务','newsmanage.do?method=findNewsContentManage&classId=10579100019&typeId=145&parentModuleFlag=news_content_ggfw','9902060000','tb_12.gif','news_content_xsgzw','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060101','新增',null,'9902060100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060102','查询',null,'9902060100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060103','修改',null,'9902060100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060104','删除',null,'9902060100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060200','后勤服务','newsmanage.do?method=findNewsContentManage&classId=10579100019&typeId=146&parentModuleFlag=news_content_hqfw','9902060000','tb_12.gif','news_content_hqfw','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060201','新增',null,'9902060200','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060202','查询',null,'9902060200','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060203','修改',null,'9902060200','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060204','删除',null,'9902060200','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060300','网络服务','newsmanage.do?method=findNewsContentManage&classId=10579100019&typeId=147&parentModuleFlag=news_content_wlfw','9902060000','tb_12.gif','news_content_wlfw','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060301','新增',null,'9902060300','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060302','查询',null,'9902060300','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060303','修改',null,'9902060300','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060304','删除',null,'9902060300','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060400','平安校园','newsmanage.do?method=findNewsContentManage&classId=10579100019&typeId=148&parentModuleFlag=news_content_paxy','9902060000','tb_12.gif','news_content_paxy','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060401','新增',null,'9902060400','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060402','查询',null,'9902060400','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060403','修改',null,'9902060400','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060404','删除',null,'9902060400','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060500','交通信息','newsmanage.do?method=findNewsContentManage&classId=10579100019&typeId=150&parentModuleFlag=news_content_jtxx','9902060000','tb_12.gif','news_content_jtxx','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060501','新增',null,'9902060500','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060502','查询',null,'9902060500','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060503','修改',null,'9902060500','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060504','删除',null,'9902060500','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060600','校历','newsmanage.do?method=findNewsContentManage&classId=10579100019&typeId=151&parentModuleFlag=news_content_xiaoli','9902060000','tb_12.gif','news_content_xiaoli','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060601','新增',null,'9902060600','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060602','查询',null,'9902060600','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060603','修改',null,'9902060600','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060604','删除',null,'9902060600','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060700','下载中心','newsmanage.do?method=findNewsContentManage&classId=10579100019&typeId=149&parentModuleFlag=news_content_xzzx','9902060000','tb_12.gif','news_content_xzzx','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060701','新增',null,'9902060700','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060702','查询',null,'9902060700','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060703','修改',null,'9902060700','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902060704','删除',null,'9902060700','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070000','人才招聘','newsmanage.do?method=findNewsContentManage&classId=10579100020&parentModuleFlag=news_content_rczp','9902000000','tb_12.gif','news_content_rczp','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070100','人事处','newsmanage.do?method=findNewsContentManage&classId=10579100020&typeId=152&parentModuleFlag=news_content_rsc','9902070000','tb_12.gif','news_content_rsc','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070101','新增',null,'9902070100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070102','查询',null,'9902070100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070103','修改',null,'9902070100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070104','删除',null,'9902070100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070200','招聘信息','newsmanage.do?method=findNewsContentManage&classId=10579100020&typeId=153&parentModuleFlag=news_content_zpxx','9902070000','tb_12.gif','news_content_zpxx','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070201','新增',null,'9902070200','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070202','查询',null,'9902070200','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070203','修改',null,'9902070200','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9902070204','删除',null,'9902070200','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100000','东职学子','newsmanage.do?method=findNewsContentManage&classId=10579100000&parentModuleFlag=news_content_stu_news','9901000000','tb_12.gif','news_content_stu_news','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100100','东职学子','newsmanage.do?method=findNewsContentManage&classId=10579100000&typeId=130&parentModuleFlag=news_content_stu','9901100000','tb_12.gif','news_content_stu','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100101','新增',null,'9901100100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100102','查询',null,'9901100100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100103','修改',null,'9901100100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901100104','删除',null,'9901100100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110000','东职论坛','newsmanage.do?method=findNewsContentManage&classId=10579100008&parentModuleFlag=news_content_bbs_news','9901000000','tb_12.gif','news_content_bbs_news','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110100','东职论坛','newsmanage.do?method=findNewsContentManage&classId=10579100008&typeId=131&parentModuleFlag=news_content_bbs','9901110000','tb_12.gif','news_content_bbs','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110101','新增',null,'9901110100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110102','查询',null,'9901110100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110103','修改',null,'9901110100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901110104','删除',null,'9901110100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120000','主页顶部图片','newsmanage.do?method=findNewsContentManage&classId=10579100021&parentModuleFlag=news_content_pric_top','9901000000','tb_12.gif','news_content_pric_top','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120100','顶部图片','newsmanage.do?method=findNewsContentManage&classId=10579100021&typeId=198&parentModuleFlag=news_content_top','9901120000','tb_12.gif','news_content_top','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120101','新增',null,'9901120100','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120102','查询',null,'9901120100','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120103','修改',null,'9901120100','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901120104','删除',null,'9901120100','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010051','新增',null,'9901010000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010052','查询',null,'9901010000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010053','修改',null,'9901010000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901010054','删除',null,'9901010000','tb_12.gif','delete','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020051','新增',null,'9901020000','tb_12.gif','add','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020052','查询',null,'9901020000','tb_12.gif','select','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020053','修改',null,'9901020000','tb_12.gif','update','1');
+
+INSERT INTO "dbo"."sys_module"
+  ("module_id","module_name","url","up_module","module_picture","module_flag","if_open")
+VALUES('9901020054','删除',null,'9901020000','tb_12.gif','delete','1');
+
+COMMIT;
+

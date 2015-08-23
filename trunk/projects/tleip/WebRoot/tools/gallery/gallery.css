@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+img {
+	border: 0;
+}
+
+ul,li {
+	list-style-type: none;
+}
+
+/*位置属性*/
+.newsTitle {
+	font-family: 'Microsoft Yahei', 'SimHei';
+	font-size: 18px;
+	color: #000000;
+	font-weight: bold;
+	margin: 5px auto;
+	text-align: center;
+	line-height: 24px;
+}
+
+.imgnav {
+	position: relative;
+	margin: 0 auto;
+	width: 662px;
+}
+
+#img {
+	z-index: 10;
+	width: 662px;
+	position: relative;
+	text-align: center;
+}
+
+#img img {
+	height: 400px;
+	display: none;
+	border: 2px solid #EAEBF0;
+	margin: 0 auto;
+}
+
+#img p {
+	display: none;
+	margin: 5px 0px 0px 20px;
+	text-align: left;
+	line-height: 24px;
+}
+
+#newsTitle span {
+	display: none;
+}
+
+#front {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 5;
+	cursor: pointer;
+	width: 331px;
+	height: 408px;
+	background: url(../images/blank.gif);
+}
+
+#front a {
+	position: absolute;
+	left: 0;
+	top: 178px;
+	display: block;
+	background: url(../images/imgSlideLeft.png) no-repeat;
+	width: 52px;
+	height: 52px;
+	display: none;
+}
+
+#next {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 10;
+	cursor: pointer;
+	width: 331px;
+	height: 408px;
+	background: url(../images/blank.gif);
+}
+
+#next a {
+	position: absolute;
+	right: 0px;
+	top: 178px;
+	display: block;
+	background: url(../images/imgSlideRight.png) no-repeat;
+	width: 52px;
+	height: 52px;
+	display: none;
+}
+
+#cbtn {
+	background: #EAEBF0;
+	position: relative;
+	height: 122px;
+	margin-top: 12px;
+}
+
+#cbtn ul {
+	position: relative;
+	width: 10000px;
+	height: 122px;
+	margin-left: 25px;
+}
+
+#cbtn ul li {
+	float: left;
+	padding: 8px 3px 3px 3px;
+	width: 116px;
+	height: 86px;
+	cursor: pointer;
+	text-align: center;
+	margin-right: 8px;
+	position: relative;
+}
+
+#cbtn ul li img {
+	width: 116px;
+	height: 86px;
+	display: block;
+}
+
+#cbtn ul li tt {
+	background: #000;
+	color: #FFF;
+	position: absolute;
+	right: 4px;
+	bottom: 4px;
+	z-index: 20;
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 16px;
+	padding: 0 5px;
+}
+
+#cbtn li.hov {
+	background: url(../images/imgHoverBg.gif) no-repeat;
+}
+
+.ctrl div {
+	clear: both;
+}
+
+#cSlideUl {
+	width: 690px;
+	height: 116px;
+	overflow: hidden;
+	position: relative;
+	top: 10px;
+	margin: 0 auto;
+}
+
+.picSildeLeft {
+	cursor: pointer;
+	position: absolute;
+	top: 32px;
+	left: 0px;
+	z-index: 9;
+}
+
+.picSildeRight {
+	cursor: pointer;
+	position: absolute;
+	top: 32px;
+	right: 0px;
+	z-index: 9;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="hrUser" extends="base" namespace="/view">
+		<action name="hrUser" class="hrUserAction">
+			<result name="input">
+				/core/system/user/${#parameters.inputPage[0]}
+			</result>
+			<result name="list">/core/system/user/list.jsp</result>
+			<result name="entryAdd">/core/system/user/add.jsp</result>
+			<result name="entryUpdate">
+				/core/system/user/update.jsp
+			</result>
+			<result name="exportSuccess" type="stream">
+				<param name="contentType">
+					application/octet-stream;charset=ISO8859-1
+				</param>
+				<param name="inputName">downloadFile</param>
+				<param name="contentDisposition">
+					attachment;filename="${fileName}"
+				</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="import">/core/system/user/import.jsp</result>
+			<result name="downSuccess" type="stream">
+				<param name="contentType">
+					application/octet-stream;charset=ISO8859-1
+				</param>
+				<param name="inputName">downloadFile1</param>
+				<param name="contentDisposition">
+					attachment;filename="${fileName}"
+				</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="userRole">
+				/core/system/user/userRole.jsp
+			</result>
+		</action>
+	</package>
+</struts>

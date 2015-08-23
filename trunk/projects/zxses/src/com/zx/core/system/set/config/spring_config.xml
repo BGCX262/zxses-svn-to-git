@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<!--Action层配置Bean  -->
+	<bean id="configSetAction"
+		class="com.zx.core.system.set.action.ConfigSetAction" scope="prototype">
+		<property name="configSetService" ref="configSetService" />
+	</bean>
+	<!--Service层配置Bean  -->
+	<bean id="configSetService" parent="txProxyTemplate">
+		<property name="target">
+			<bean
+				class="com.zx.core.system.set.service.ConfigSetService">
+				<property name="configSetDAO" ref="configSetDAO" />
+			</bean>
+		</property>
+	</bean>
+	<!--Dao层配置Bean-->
+	<bean id="configSetDAO"
+		class="com.zx.core.system.set.dao.ConfigSetDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>
